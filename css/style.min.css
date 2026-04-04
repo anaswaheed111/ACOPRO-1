@@ -1,0 +1,57 @@
+
+@charset "utf-8";
+/*自定义*/
+
+/*编辑器样式*/
+.elementor-section {
+    /*float: inherit;*/
+    float: left;
+    width: 100%;
+}
+.pmore-01-detail p{margin-top:0}
+/*编辑器点击增加内容冲突样式*/
+.elementor-add-section{min-width:1160px;}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 100%;*/
+}
+
+.alignleft {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
+}
+
+/*搜索结果页*/
+/*.wow .right>h4>a{*/
+/*    line-height: 3;*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*产品详情页弹出窗兼容*/
+.gallery-top {
+    height: 450px;
+    width: 800px;
+}
+.gallery-thumbs {
+    height: 100px;
+}
+
+/*2021/03/09 修正除banner外轮播高度、图片高度、a标签块级问题*/
+.swiper-container ,.swiper-wrapper{height: auto;}
+.con-01-message,.pmessage-01,.nl_lists-01 ul li div img,.pmenu_product-01 ul li a span img,.p_list-01 ul li a,.p_lists-01 ul li div img{height:auto}
+/*.p_list-01 ul li a,.p_lists-01 ul li a{display:table}*/
+
+.hnav-60 ul li ul li:hover a{color:#f22317 !important}
+
+.hnav-60 ul li:hover ul li a,.hnav-60 ul li ul li:hover ul li a{color:#fff}
+
+.hnav-60 ul li ul li:hover ul li a{color:#fff!important}
+.hnav-60 ul li ul li ul li:hover a{color:#f22317 !important}
