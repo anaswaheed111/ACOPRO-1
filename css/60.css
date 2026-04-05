@@ -27,13 +27,14 @@
 .hlogo-60{float: left;padding: 15px 0px;text-align: center;}
 .hlogo-60 img{max-height: 50px;max-width: 100%;}
 .hbotton-60-right{float: right;text-align: center;border:0;box-sizing: border-box;display: inline-block;display: -webkit-inline-box;}
-.hnav-60{float: left;text-align: center;display: inline-block;height: 84px;}
+.hnav-60{text-align: center;display: inline-block;height: 84px;}
 
 @media screen and (min-width:1024px) and (max-width:1400px) {
-	.hnav-60{width: 80%;}
+	.hnav-60{width: 100%;}
 }
+
 @media screen and (min-width:1400px) and (max-width:1820px) {
-	.hnav-60{width: 83%;}
+	.hnav-60{width: 100%;}
 }
 
 .hnav-60 ul{float: right;width: 100%;}
@@ -79,7 +80,7 @@
 /* ul li ul li ul li */
 
 
-.hcontact-60{margin: 33px 0px 0px 20px;position: relative;float: right;}
+.hcontact-60{margin: 33px 0px 0px 20px;position: relative;float: right; display: none;}
 .hcontact-60 form{display: block;width: auto;height: 20px;float:left;}
 .hcontact-60 form:hover .find-60-find{transition: all 0.3s;width: 304px;border: 1px solid #57F3F3;box-sizing: border-box;}
 .hcontact-60 form:hover input{display: block;}
