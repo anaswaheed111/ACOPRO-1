@@ -1172,7 +1172,7 @@ body {
 
 .banner01:hover .swiper-button-next,
 .banner01:hover .swiper-button-prev {
-	display: block;
+	display: none;
 	top: 50%
 }
 

@@ -49,9 +49,19 @@
 .con-01-message,.pmessage-01,.nl_lists-01 ul li div img,.pmenu_product-01 ul li a span img,.p_list-01 ul li a,.p_lists-01 ul li div img{height:auto}
 /*.p_list-01 ul li a,.p_lists-01 ul li a{display:table}*/
 
-.hnav-60 ul li ul li:hover a{color:#f22317 !important}
+.hnav-60 ul li ul li:hover a{ 
+    color: #00A8FF !important; /* لون الكلام يتغير للأزرق الفاتح اللي اخترناه */
+    }
+.hnav-60 ul li ul li a{ 
+    color: #000000 !important; /* لون الكلام يتغير للأزرق الفاتح اللي اخترناه */
+    }
 
-.hnav-60 ul li:hover ul li a,.hnav-60 ul li ul li:hover ul li a{color:#fff}
+.hnav-60 ul li:hover ul li a,.hnav-60 ul li ul li:hover ul li a{ /* لون أسود رمادي مريح للعين */
+    font-weight: 500;
+    display: block;
+    transition: all 0.3s ease;}
 
-.hnav-60 ul li ul li:hover ul li a{color:#fff!important}
-.hnav-60 ul li ul li ul li:hover a{color:#f22317 !important}
+.hnav-60 ul li ul li:hover ul li a{color:#222!important}
+.hnav-60 ul li ul li ul li:hover a{color:#00A8FF !important}
+
+
