@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#443725282137042c312a252a2137302b2b286a272b29" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-is-the-purpose-of-carbide-inserts-coating-newsinfo-35.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-is-the-purpose-of-carbide-inserts-coating-newsinfo-35.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-is-the-purpose-of-carbide-inserts-coating-newsinfo-35.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-is-the-purpose-of-carbide-inserts-coating-newsinfo-35.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What is the purpose of carbide inserts coating</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202371117636.jpg" style="max-width:600px;"alt="What is the purpose of carbide inserts coating">
+      <img class="newsimg" src="../UploadFiles/other/202371117636.jpg"  alt="What is the purpose of carbide inserts coating">
       <div class="nmore-01-context"> <p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">The purpose of <a href="../coated-inserts/index.html" target="_self">coating carbide inserts</a> is to enhance their performance, durability, and cutting capabilities. Coatings provide several benefits that contribute to the overall effectiveness of carbide inserts. Here are the main objectives of coating carbide inserts:</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><strong>Improved Wear Resistance: </strong></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">Coatings increase the hardness of the carbide inserts, making them more resistant to wear. This allows the inserts to withstand the high forces and temperatures generated during cutting operations, resulting in longer tool life and reduced tool replacement frequency.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><strong>Reduced Friction: </strong></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">Coatings reduce the friction between the carbide inserts and the workpiece, resulting in smoother cutting action. This minimizes heat generation and prevents the build-up of chips on the cutting edge, leading to improved chip evacuation and better surface finish.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><strong>Enhanced Heat Resistance: </strong></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">Coatings provide thermal stability to the carbide inserts, allowing them to withstand high temperatures without losing their hardness or deforming. This enables higher cutting speeds and feeds, increasing productivity and efficiency.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><strong>Improved Cutting Speed and Feed Rates: </strong></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">Coated carbide inserts can withstand higher cutting speeds and feed rates due to their increased hardness and reduced friction. This results in faster machining times and higher productivity.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><strong>Extended Tool Life: </strong></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">By improving wear resistance, reducing friction, and enhancing heat resistance, coatings significantly extend the tool life of carbide inserts. This reduces the frequency of tool changes, increases production uptime, and lowers tooling costs.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><img src="../UploadFiles/other/20230711/16890651539982802.jpg" title="coatings_on_cutting_inserts.jpg" alt="coatings_on_cutting_inserts.jpg"/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);">Enhanced Performance in Specific Applications: Different coatings are designed to excel in specific machining applications or materials. For example, some coatings are optimized for high-speed machining, while others are suitable for cutting high-hardness or high-temperature alloys. Coatings can be tailored to specific requirements to achieve optimal performance.
 
 Overall, the purpose of coating carbide inserts is to improve their performance, increase their durability, and optimize their cutting capabilities. Coatings enhance wear resistance, reduce friction, improve heat resistance, extend tool life, and enable better performance in various machining applications.</span></p><p><span style="color: rgb(16, 18, 20); font-family: &quot;PingFang SC&quot;, &quot;Segoe UI&quot;, Arial, &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, &quot;Malgun Gothic&quot;, sans-serif; font-size: 14px; white-space: pre-wrap; caret-color: rgb(251, 74, 62); background-color: rgb(255, 255, 255);"><br/></span></p>

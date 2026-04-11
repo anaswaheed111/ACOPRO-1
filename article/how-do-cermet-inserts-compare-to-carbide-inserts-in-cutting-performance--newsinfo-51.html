@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#3340525f5640735b465d525d5640475c5c5f1d505c5e" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-do-cermet-inserts-compare-to-carbide-inserts-in-cutting-performance--newsinfo-51.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-do-cermet-inserts-compare-to-carbide-inserts-in-cutting-performance--newsinfo-51.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-do-cermet-inserts-compare-to-carbide-inserts-in-cutting-performance--newsinfo-51.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-do-cermet-inserts-compare-to-carbide-inserts-in-cutting-performance--newsinfo-51.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How Do Cermet Inserts Compare to Carbide Inserts in Cutting Performance?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202461317515.png" style="max-width:600px;"alt="How Do Cermet Inserts Compare to Carbide Inserts in Cutting Performance?">
+      <img class="newsimg" src="../UploadFiles/other/202461317515.png"  alt="How Do Cermet Inserts Compare to Carbide Inserts in Cutting Performance?">
       <div class="nmore-01-context"> <p><br/></p><p>Cermet and carbide inserts are two of the most widely used cutting tools in the machining industry. Both materials offer unique advantages and are selected based on specific application requirements. This article delves into the comparative cutting performance of cermet and carbide inserts, examining their material properties, machining capabilities, and application.</p><p><br/></p><p><span style="font-size: 18px;"><strong>Material Properties</strong></span></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><span style="font-size: 16px;"><strong>Cermet Inserts</strong></span></p><p><a href="../pro_cat/cermet-inserts/index.html" target="_self">Cermet inserts</a> are composed of ceramic particles (often titanium carbide, TiC) combined with metallic binders such as nickel or cobalt. This composition gives cermet inserts their name, a blend of ceramic and metal. The ceramic component provides high hardness and wear resistance, while the metal binder adds toughness.</p><p><br/></p></li><li><p><strong>Carbide Inserts</strong></p><p>Carbide inserts, typically made from tungsten carbide (WC) with cobalt binders, are known for their exceptional hardness and toughness. The high hardness of tungsten carbide provides excellent wear resistance, while cobalt binders enhance toughness and thermal conductivity.</p></li></ul><p><br/></p><p><strong><span style="font-size: 20px;">Cutting Performance Comparison</span></strong></p><p><br/></p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p><strong>Hardness and Wear Resistance</strong></p><p>Cermet inserts generally exhibit higher hardness than carbide inserts. This superior hardness translates to better wear resistance, making <strong>cermet inserts</strong> ideal for high-speed finishing operations where tool wear is a critical factor. In applications where maintaining tight tolerances and achieving a high surface finish are essential, cermet inserts can significantly outlast carbide inserts.</p><p><br/></p></li><li><p><strong>Toughness and Shock Resistance</strong></p><p>While cermet inserts excel in hardness, they typically have lower toughness compared to carbide inserts. Carbide inserts, with their robust toughness, can withstand higher impact forces and are less prone to chipping or fracturing under heavy or interrupted cuts. This makes carbide inserts more suitable for roughing operations and applications involving heavy or interrupted cuts where tool durability is paramount.</p><p><br/></p></li><li><p><strong>Thermal Conductivity</strong></p><p>Carbide inserts have better thermal conductivity than cermet inserts. This property allows carbide inserts to dissipate heat more effectively during the cutting process, reducing the risk of thermal damage to the tool and workpiece. As a result, carbide inserts are often preferred for operations involving high cutting temperatures or materials that are difficult to machine.</p><p><br/></p></li><li><p><strong>Surface Finish and Dimensional Accuracy</strong></p><p>Cermet inserts are renowned for their ability to produce superior surface finishes and maintain dimensional accuracy over extended periods. The high hardness and wear resistance of <em>cermet inserts</em> reduce tool wear, resulting in consistent surface quality and precise tolerances. This makes cermet inserts particularly advantageous in finishing operations where surface integrity and accuracy are critical.</p></li></ol><p><br/></p><p><strong><span style="font-size: 20px;">Application</span></strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>High-Speed Finishing</strong></p><p>Cermet inserts are ideal for high-speed finishing operations in materials such as steel, stainless steel, and cast iron. Their wear resistance and ability to produce high-quality surface finishes make them the preferred choice for these applications. Industries such as automotive and aerospace, where precision and surface quality are paramount, often utilize cermet inserts for finishing tasks.</p><p><br/></p></li><li><p><strong>Roughing and Interrupted Cuts</strong></p><p>For roughing operations and applications involving interrupted cuts, carbide inserts are generally more suitable due to their superior toughness and thermal conductivity. Carbide inserts can handle the higher impact forces and heat generated during these processes, ensuring longer tool life and reduced risk of tool failure.</p><p><br/></p></li><li><p><strong>Versatile Machining</strong></p><p>Carbide inserts are versatile and can be used in a wide range of machining operations, from roughing to finishing, across various materials including steel, stainless steel, cast iron, and non-ferrous metals. Their balanced combination of hardness, toughness, and thermal conductivity makes them a reliable choice for many general-purpose machining tasks.</p></li></ul><p><br/></p><p><br/></p><p><br/></p><p>In summary, the choice between cermet and carbide inserts depends on the specific machining requirements and application contexts. <span style="text-decoration: underline;">Cermet inserts</span> offer superior hardness and wear resistance, making them ideal for high-speed finishing operations where surface quality and precision are critical. On the other hand, carbide inserts provide excellent toughness and thermal conductivity, making them more suitable for roughing operations and applications involving high impact forces or high temperatures.</p><p><br/></p><p>By understanding the strengths and limitations of each material, machinists and engineers can make informed decisions to optimize cutting performance, improve tool life, and achieve desired machining outcomes.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

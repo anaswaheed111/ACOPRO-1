@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#2655474a4355664e5348474843555249494a0845494b" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Are Round Carbide Inserts and When Should You Use Them?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2025625154516-2.jpg" style="max-width:600px;"alt="What Are Round Carbide Inserts and When Should You Use Them?">
+      <img class="newsimg" src="../UploadFiles/other/2025625154516-2.jpg"  alt="What Are Round Carbide Inserts and When Should You Use Them?">
       <div class="nmore-01-context"> <p><br/></p><p>In the world of CNC machining, tool selection is critical to achieving precision, efficiency, and cost-effectiveness. Among various insert geometries, <strong>round carbide inserts</strong> stand out for their durability and versatility. But what exactly are round carbide inserts, and when should you use them instead of other shapes? This article will guide you through everything you need to know about round carbide inserts, including their features, benefits, and best-use scenarios.</p><p><br/></p><hr/><h3><br/></h3><h3>What Are Round Carbide Inserts?</h3><p><br/></p><p><strong>Round carbide inserts</strong> are cutting tools made from tungsten carbide, featuring a circular cutting edge. They are commonly used in turning, milling, and profiling operations. Unlike triangular or square inserts, round inserts distribute cutting forces more evenly, reducing tool wear and improving chip control.</p><p>These inserts often come in designations like <strong>RCGT, RNGN, or RNMA</strong>, depending on their chipbreaker design, tolerance class, and edge preparation.</p><p><br/></p><hr/><h3><br/></h3><h3>Key Features of Round Carbide Inserts</h3><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>Durable Design:</strong> The round shape offers more cutting edge per insert, enhancing longevity.</p></li><li><p><strong>High Edge Strength:</strong> Ideal for handling heavy cuts and interrupted cutting conditions.</p></li><li><p><strong>Versatility:</strong> Suitable for roughing and finishing in a wide range of materials, including steel, stainless steel, cast iron, and exotic alloys.</p></li><li><p><strong>Superior Heat Dissipation:</strong> The large surface area helps in managing heat during high-speed operations.</p></li></ul><p><br/></p><hr/><p></p><h3><br/></h3><h3>When Should You Use Round Carbide Inserts?</h3><p><br/></p><h4>1. <strong>Heavy-Duty Roughing</strong></h4><p>Round carbide inserts are perfect for roughing operations where large amounts of material are removed. Their robust shape withstands the high forces generated during aggressive cuts.</p><h4>2. <strong>Interrupted Cutting</strong></h4><p>For applications like milling where the cutting edge frequently enters and exits the workpiece, round inserts offer better resistance to chipping and breakage compared to square or pointed inserts.</p><h4>3. <strong>Hard-to-Machine Materials</strong></h4><p>When machining hard alloys or cast iron, the high compressive strength and durability of round carbide inserts ensure stable performance and long tool life.</p><h4>4. <strong>Profile Machining and Contouring</strong></h4><p>The curved cutting edge provides smoother transitions in contouring applications, especially useful in die and mold industries.</p><h4>5. <strong>Improving Surface Finish</strong></h4><p>Despite being often used for roughing, with the right setup, round inserts can also achieve excellent surface finishes on complex profiles.</p><p><br/></p><hr/><p></p><h3><br/></h3><h3>Pros and Cons at a Glance</h3><p><br/></p><table class="w-fit min-w-(--thread-content-width)"><thead><tr class="firstRow"><th><strong>Pros</strong></th><th><strong>Cons</strong></th></tr></thead><tbody><tr><td>High strength and toughness</td><td>Less effective in sharp-cornered cuts</td></tr><tr><td>Ideal for heavy roughing</td><td>May require more power</td></tr><tr><td>Great for interrupted cuts</td><td>Not ideal for internal threading</td></tr><tr><td>Long tool life</td><td>Limited chipbreaker options</td></tr></tbody></table><p><span class=""></span></p><p><br/></p><hr/><p></p><h3><br/></h3><h3>Choosing the Right Round Carbide Insert</h3><p><br/></p><p>When selecting a round carbide insert, consider the following factors:</p><ul class=" list-paddingleft-2"><li><p><strong>Insert Grade:</strong> Choose the right carbide grade for the material (e.g., P for steel, K for cast iron).</p></li><li><p><strong>Coating:</strong> PVD and CVD coatings improve wear resistance and reduce friction.</p></li><li><p><strong>Chipbreaker Design:</strong> If your operation requires chip control, select an insert with an appropriate chipbreaker.</p></li><li><p><strong>Insert Size and Radius:</strong> Larger radii can handle deeper cuts but may require higher machine power.</p></li></ul><p><br/></p><hr/><p></p><h3><br/></h3><h3>Conclusion</h3><p><br/></p><p><strong>Round carbide inserts</strong> are an essential tool for any machinist dealing with tough materials, heavy cuts, or interrupted cutting conditions. Their unique geometry offers unmatched strength and durability, making them a go-to solution for roughing and profiling operations.</p><p>Whether you’re operating a CNC lathe or a milling center, understanding when and how to use round carbide inserts can significantly enhance your machining performance and tool life.</p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

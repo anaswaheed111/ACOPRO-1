@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#0271636e6771426a776c636c6771766d6d6e2c616d6f" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="understanding-the-difference-between-a-dnmg-insert-and-tnmg-insert-newsinfo-15.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/understanding-the-difference-between-a-dnmg-insert-and-tnmg-insert-newsinfo-15.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""understanding-the-difference-between-a-dnmg-insert-and-tnmg-insert-newsinfo-15.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/understanding-the-difference-between-a-dnmg-insert-and-tnmg-insert-newsinfo-15.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Understanding the Difference between a DNMG Insert and TNMG Insert</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510113415.jpg" style="max-width:600px;"alt="Understanding the Difference between a DNMG Insert and TNMG Insert">
+      <img class="newsimg" src="../UploadFiles/other/2023510113415.jpg"  alt="Understanding the Difference between a DNMG Insert and TNMG Insert">
       <div class="nmore-01-context"> <h1><br/></h1><p style="text-align: center;"><img src="../UploadFiles/other/20230510/16836888142352247.png" title="DNMG-Insert-1.png" alt="DNMG-Insert-1.png"/><img src="../UploadFiles/other/20230510/16836888222095716.png" title="TNMG-Insert-1.png" alt="TNMG-Insert-1.png"/></p><p><br/></p><h1><br/></h1><p>When making the choice of turning insert, going for the right insert of required job is just half the battle done. There are also steps like choosing the best chip breaker and grade that also need to be done. Whether you are going for a <a href="../product/dnmg150604-dnmg150608-dnmg150612-tm-series-tungsten-carbide-high-quality-external-lathe-cutter-tools-for-steel-cnc-turning-inserts/index.html">DNMG insert</a> or a <a href="../index.html">TNMG insert</a>, the very first thing that you need to consider is whether you are simple going for general turning or for finishing or roughing. Here, it is important to note that the negative inserts tend to be the strongest. Thus, they are the most perfect options for general turning and roughing applications. That’s because they make way for deep cut depths and higher feed rates because of thickness and strong insert shapes.</p><p><br/></p><p><br/></p><p><br/></p><p style="text-align: center;"><a href="../coated-inserts/dnmg-insert/index.html" target="_self"><img src="../UploadFiles/other/20230707/16887213915662840.jpg" title="DNMG and TNMG" alt="DNMG and TNMG"/></a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><strong>Let&#39;s explore the dissimilarities between <a href="../coated-inserts/dnmg-insert/index.html" target="_self">DNMG</a> and <a href="../indexable-inserts/tnmg-insert/index.html" target="_self">TNMG</a> inserts:</strong><br/></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Insert Shape:</strong></p></li></ul><p>The main difference lies in the insert shape. DNMG inserts have a rhombic shape, with a 55-degree angle between the two opposite cutting edges. On the other hand, TNMG inserts have a triangular shape, with a 60-degree angle between the two opposite cutting edges.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Cutting Edge Configuration:</strong></p></li></ul><p>DNMG inserts typically have four cutting edges - two primary cutting edges and two secondary cutting edges. The primary cutting edges are located on the longer sides of the rhombic shape, while the secondary cutting edges are on the shorter sides. TNMG inserts, on the other hand, have three cutting edges - one primary cutting edge and two secondary cutting edges. The primary cutting edge is the longest edge of the triangular shape, while the secondary cutting edges are the shorter edges.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Application:</strong></p></li></ul><p>DNMG inserts are commonly used for general-purpose turning operations, suitable for both roughing and finishing cuts. They are versatile and can handle a wide range of materials and cutting conditions. TNMG inserts, on the other hand, are primarily used for medium to heavy-duty turning operations. They are designed for roughing applications and are particularly effective in removing larger amounts of material.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Chip Control:</strong></p></li></ul><p>Due to their different cutting edge configurations, DNMG and TNMG inserts exhibit slight differences in chip control. DNMG inserts tend to produce shorter and more manageable chips, making them suitable for applications where chip control is critical. TNMG inserts, on the other hand, are designed to handle larger chip loads, making them more effective in heavy machining operations.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Insert Size:</strong></p></li></ul><p>DNMG and TNMG inserts are available in various sizes to accommodate different lathe tool holders and machine setups. The size designation typically includes information about the insert shape, cutting edge length, and thickness.</p><p><br/></p><p><br/></p><p>For finishing jobs, the positive inserts always serve as the best option because they have the ability of creating less cutting forces. Therefore, they can easily get away with low cut depths while eliminating vibration at the same time. The DNMG or Diamond 55 degree insert is one of the most well-known roughing inserts. These inserts come with 55 degree included angle and can effectively be used for shaft turning and recessing. They are preferred over the TNMG inserts mainly because they produce less cutting force.<br/></p><p><br/></p><p>In conclusion, while DNMG and TNMG inserts share similarities in their usage for metal turning operations, they differ in terms of insert shape, cutting edge configuration, application, chip control, and size. Understanding the differences between these insert types can help machinists select the most suitable insert for their specific turning needs.</p><p><br/></p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#97e4f6fbf2e4d7ffe2f9f6f9f2e4e3f8f8fbb9f4f8fa" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-to-choose-positive-and-negative-angle-inserts--newsinfo-31.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-to-choose-positive-and-negative-angle-inserts--newsinfo-31.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-to-choose-positive-and-negative-angle-inserts--newsinfo-31.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-to-choose-positive-and-negative-angle-inserts--newsinfo-31.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How To Choose Positive And Negative Angle Inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023515103945.png" style="max-width:600px;"alt="How To Choose Positive And Negative Angle Inserts?">
+      <img class="newsimg" src="../UploadFiles/other/2023515103945.png"  alt="How To Choose Positive And Negative Angle Inserts?">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p>When it comes to selecting the appropriate insert, finding the insert that is most suited to the task at hand is just half the fight. The last step consists of choosing the most appropriate grade and chip breaker.</p><p><br/></p><p>In the following paragraphs, we will explain how to go about picking the most appropriate insert shape and grade for the particular duties you have. When selecting an insert, there are a lot of different factors to think about. In order to obtain effective chip control and machining performance, it is important to carefully pick the insert geometry, insert grade, insert shape (nose angle), insert size, nose radius, and entry (lead) angle.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>Choose the shape of the insert depending on the operation that you want to do, such as finishing</p></li><li><p>For optimal durability and cost effectiveness, choose the insert with the maximum feasible nose angle.</p></li><li><p>If there is a propensity for vibration, use a smaller nose radius.</p></li><li><p>Choose the insert size based on the depth of cut.</p></li><li><p>Choose the biggest feasible nose radius for insert strength.</p></li><li><p>Choose a lower nose radius.</p><p><br/></p></li></ul><p><strong>Inserts Geometry</strong></p><p><br/></p><p>The geometries of inserts may be broken down into three fundamental types that are most suited for finishing, medium, and roughing operations respectively.</p><p><br/></p><p><strong>Roughing Inserts:</strong> Combinations of a high feed rate, and depth of cut for the cut. Operations that need the most cutting-edge level of security.</p><p><br/></p><p><strong>Medium Inserts: </strong>Operations ranging from medium to light roughing. A diverse selection of depth of cut and feed rate combinations are available.</p><p><br/></p><p><strong>Finishing Inserts:</strong> Operations using finishing inserts should be performed at shallow depths of cut and slow feed rates. Operations that need just a little amount of cutting force.</p><p><br/></p><p><strong>Inserts Wiper Geometry</strong></p><p><br/></p><p>Make use of wiper inserts to provide either a better surface finish while retaining conventional cutting data or a maintained surface finish while drastically increasing feed rate. The wiper geometry known as WMX is First Choice, and it serves as an excellent place of departure for the vast majority of applications. There is always a fruitful option available, even when the circumstances change. In the event that vibration issues arise, using a wiper shape that is positive will help reduce the amount of force required and keep production levels stable.</p><p><br/></p><p>Make your selections for the wiper geometry as follows:</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>WL: To provide enhanced chip control throughout the transition to a lower fn/ap.</p></li><li><p>WF: Improves chip control while also lowering the required fn/ap. Additionally, for reduced cutting pressures whenever vibrations are present.</p></li><li><p>WMX is always the first choice when it comes to applications using broad chips. Offers the highest possible productivity, a wide range of applications, and excellent outcomes.</p></li><li><p>WR: When an edge line that is more robust is required, such as in the case of interrupted cuts.</p></li></ul><p><br/></p><p><strong>Inserts grade</strong></p><p><br/></p><p>The insert grade is chosen in large part with consideration given to the following criteria: the component material (ISO P, M, K, N, S, or H); the kind of procedure (finishing, medium, roughing) The working conditions of the machine (good, average, difficult)</p><p><br/></p><p>The geometry of the insert and its grade are complementary to one another. For instance, the toughness of a grade may make up for a lack of strength in an insert geometry if the insert geometry is designed properly.</p><p><br/></p><p><strong>Insert Shape</strong></p><p><br/></p><p>When choosing the form of the insert, consideration should be given to the appropriate level of accessibility for the tool’s entry angle. In order to ensure the insert’s strength and dependability, the nose angle should be increased to its maximum achievable value. Having said that, this aspect needs to be weighed against the several different cuts that have to be carried out. A big nose angle is robust, but it calls for a greater amount of machine power and has a greater propensity to vibrate. A tiny nose angle is weaker and has a smaller cutting edge engagement, both of which might make it more vulnerable to the effects of heat. A large nose angle, on the other hand, has a larger cutting edge engagement.</p><p><br/></p><p><strong>Inserts size</strong></p><p><br/></p><p>Determine the appropriate size of the insert based on the requirements of the application as well as the available area for the cutting tool in the application. When the insert size is increased, the stability also increases. Insert sizes typically greater than IC 25 millimeters are used for heavy-duty machining (1 inch). After completion, there is often the possibility of shrinking the size.</p><p><br/></p><p><strong>How to select insert size?</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><p>Determine the greatest possible depth of cut that can be accomplished.</p></li><li><p>Determine the necessary cutting length, denoted by the symbol LE, taking into consideration the entrance (lead) angle of the tool holder, the depth of cut, and the machine specification.</p></li><li><p>If the needed LE is known in advance, it may be used to guide the selection of the appropriate cutting edge length (L) and insert cutting length (IC) for the insert.</p></li></ul><p><br/></p><p><strong>Turning Insert Nose Radius</strong></p><p><br/></p><p>When performing turning operations, it is essential to take into account the nose radius, sometimes referred to as the RE. Inserts are available for purchase in a variety of nose radius diameters in a wide range of sizes. The selection, which is controlled by the depth of cut and the feed rate, has an effect on the surface finish, chip breaking, and insert strength. Both of these factors are impacted by the selection.</p><p><br/></p><p><strong>The Cutting Forces Used As Well As the Depth of the Cut</strong></p><p><br/></p><p>The link that exists between the nose radius and the depth of cut is one factor that might have an effect on the vibrational tendencies. The radial forces that are responsible for driving the insert away from the cutting surface become more axial as the depth of cut increases. These forces are caused by the increase in the depth of cut.</p><p><br/></p><p>It is to one’s benefit to have a bigger percentage of axial forces than radial forces. Having more axial forces than radial forces. When there is a large radial force acting on the cutting process, it may have an adverse influence, which may result in vibration and a poor surface quality. This may be the case when there is an excessive amount of radial force acting on the cutting operation. As a general rule of thumb, you should choose a nose radius that is either the exact same size as the depth of cut or a little smaller size than the depth of cut.</p><p><br/></p><p><strong>Positive Or Negative Turning Insert Style</strong></p><p><br/></p><p>A positive insert will have a clearance angle that is more than zero degrees, while a negative insert will have a clearance angle that is greater than zero degrees but less than ninety degrees (for example, 7 degrees of clearance). The negative type insert explains how the insert need to be constructed so that it will tilt appropriately when it is put in the holder.</p><p><br/></p><p>The two distinct types of inserts have certain similarities in their qualities, which are outlined in the following list:</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Positive angle insert</strong></p></li></ul><p><br/></p><p>Clearance angle, single-sided cutting, positive angle insert, low cutting forces, side clearance, and angle of clearance are some of the features that are included.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Negative angle insert</strong></p></li></ul><p><br/></p><p>Insert with a negative rake angle, which may be utilized either double-sided or single-sided, has a high edge strength, has zero clearance, is the ideal choice for external turning, and is effective for heavy cutting situations.</p><p><br/></p><p><strong>Conclusion</strong></p><p><br/></p><p>Negative inserts are the most lasting and dependable solution for roughing and general turning applications because of the sturdy inserts shapes and thickness. This is due to the fact that negative inserts provide larger feed rates and deeper depths of cut than other kinds of inserts. When completing, the use of positive inserts is nearly always the optimum option since, in comparison to other kinds, they give lower cutting pressures. As a result of this, it is feasible to complete the cutting process at shallower depths, which will result in a reduction in vibration. The price of a positive and negative insert is practically the same; however, if you acquire twice as many cutting edges as you did before, the price that you pay for each cutting edge will be cut in half. This is because the price of an insert is determined by the number of cutting edges that are purchased. Get in contact with HUANA if you have any questions or concerns about positive angle inserts and negative angle inserts, or if you are interested in purchasing either kind of insert.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

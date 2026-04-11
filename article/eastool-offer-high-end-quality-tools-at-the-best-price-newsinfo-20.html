@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#0172606d64724169746f606f6472756e6e6d2f626e6c" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="eastool-offer-high-end-quality-tools-at-the-best-price-newsinfo-20.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/eastool-offer-high-end-quality-tools-at-the-best-price-newsinfo-20.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""eastool-offer-high-end-quality-tools-at-the-best-price-newsinfo-20.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/eastool-offer-high-end-quality-tools-at-the-best-price-newsinfo-20.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>ESTOOL offer high-end quality tools at the best price</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510143333.jpg" style="max-width:600px;"alt="ESTOOL offer high-end quality tools at the best price">
+      <img class="newsimg" src="../UploadFiles/other/2023510143333.jpg"  alt="ESTOOL offer high-end quality tools at the best price">
       <div class="nmore-01-context"> <p><strong><br/></strong></p><p><strong>ESTOOL</strong> is a leading manufacturer of <a href="../pro_cat/drilling-inserts/index.html" target="_self"><strong>Drilling Inserts</strong></a> and <strong>Turning Inserts</strong>, delivering cutting-edge solutions for demanding drilling and machining applications. Our products are engineered in two distinct structural designs — <strong>matrix-body bits</strong> and <strong>metallic-frame bits</strong> — each offering unique performance advantages. The choice between them depends on the specific operational requirements, environmental conditions, and project objectives.</p><h3><strong><br/></strong></h3><h3><strong>Advanced Drilling Inserts for Harsh Environments</strong></h3><p><br/></p><p>ESTOOL Drilling Inserts are trusted in a variety of sectors, including:</p><ul class=" list-paddingleft-2"><li><p><strong>Water well drilling</strong></p></li><li><p><strong>Blast hole drilling</strong></p></li><li><p><strong>Exploration and mining operations</strong></p></li></ul><p><br/></p><p>Built for <strong>extreme depths and challenging formations</strong>, our inserts deliver consistent penetration rates, extended service life, and reduced downtime. We provide a broad selection of designs, featuring <strong>tungsten carbide inserts</strong> for maximum durability and <strong>metallic teeth</strong> for specialized cutting performance, ensuring that professionals can always select the optimal tool for the task.</p><h3><strong><br/></strong></h3><h3><strong>Core Bits for Continuous Sampling</strong></h3><p><br/></p><p>Among our drilling solutions, the <strong>core bit</strong> stands out for its specialized design — a hollow center that removes cuttings and allows the central pedestal to pass into the core barrel. This enables precise <strong>continuous core retrieval</strong> in geological and oceanographic research. Organizations such as the <strong>Ocean Drilling Program (ODP)</strong> rely on advanced coring systems and ESTOOL bits to collect high-quality cores from diverse oceanic sediments and igneous rock layers.</p><h3><strong><br/></strong></h3><h3><strong>Turning Inserts for Precision Machining</strong></h3><p><br/></p><p>Our <strong>Turning Inserts</strong> are designed to meet the demands of modern CNC machining. They provide:</p><ul class=" list-paddingleft-2"><li><p><strong>Exceptional wear resistance</strong></p></li><li><p><strong>High-speed cutting capabilities</strong></p></li><li><p><strong>Precision surface finishing</strong></p></li></ul><p><br/></p><p>Manufactured to the highest quality standards, ESTOOL <a href="../pro_cat/turning-inserts/index.html" target="_self">Turning Inserts</a> deliver consistent results in heavy-duty turning operations, improving productivity while reducing tooling costs.</p><h3><strong><br/></strong></h3><h3><strong>Innovative Installation and Foundation Systems</strong></h3><p><br/></p><p>Beyond cutting tools, ESTOOL is a pioneer in <strong>installation technology</strong>, offering advanced <strong>ground screw foundation systems</strong> and <strong>solar racking structures</strong>. Supported by precise surveying and installation equipment, these systems minimize project risks, adapt to various soil conditions, and significantly accelerate installation times — transforming the solar and construction industries with <strong>cost-effective and reliable foundation solutions</strong>.</p><h3><strong><br/></strong></h3><h3><strong>Your Trusted Partner in Drilling and Machining</strong></h3><p><br/></p><p>From deep drilling in extreme environments to precision turning in high-tech manufacturing, ESTOOL delivers performance, reliability, and innovation. Our commitment to engineering excellence ensures that every product meets the highest industry standards, helping our customers achieve superior results in every project.</p><p><br/></p><p>For more information about <strong>ESTOOL Drilling Inserts</strong>, <strong>Turning Inserts</strong>, and our complete range of cutting tools and installation solutions, please visit our official website at <strong>EstoolCarbide.com</strong>.</p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

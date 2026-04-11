@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#0370626f6670436b766d626d6670776c6c6f2d606c6e" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-are-the-key-features-to-look-for-in-bar-peeling-inserts--newsinfo-46.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-are-the-key-features-to-look-for-in-bar-peeling-inserts--newsinfo-46.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-are-the-key-features-to-look-for-in-bar-peeling-inserts--newsinfo-46.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-are-the-key-features-to-look-for-in-bar-peeling-inserts--newsinfo-46.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Are the Key Features to Look for in Bar Peeling Inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024115153325.png" style="max-width:600px;"alt="What Are the Key Features to Look for in Bar Peeling Inserts?">
+      <img class="newsimg" src="../UploadFiles/other/2024115153325.png"  alt="What Are the Key Features to Look for in Bar Peeling Inserts?">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p><strong>Bar peeling inserts</strong> play a crucial role in the metalworking industry, enabling efficient and high-quality machining operations. When selecting bar peeling inserts, it is essential to consider several key features that can significantly impact their performance and effectiveness. These features include material composition, coating, geometry, and overall durability.</p><p><br/></p><p>One of the primary features to look for in <em>bar peeling inserts</em> is the material composition. Inserts are commonly made from carbide, ceramic, or high-speed steel. Carbide inserts are known for their hardness and wear resistance, making them suitable for high-speed machining and tough materials. Ceramic inserts offer excellent heat resistance and are ideal for high-speed and high-temperature applications. High-speed steel inserts are more cost-effective and can be easily sharpened, making them suitable for lower volume production and less demanding materials.</p><p><br/></p><p>In addition to material composition, the coating of <a href="../product/tungsten-carbide-inserts-turning-inserts-on-lathes-tnmx110616-tnmx150916-using-for-peeling/index.html" target="_self">bar peeling inserts</a> is a critical feature to consider. Coatings such as titanium nitride (TiN), titanium carbonitride (TiCN), and aluminum oxide (Al2O3) can enhance the inserts&#39; performance by reducing friction, improving wear resistance, and increasing tool life. Selecting the appropriate coating depends on the specific machining application and the type of material being processed.</p><p><br/></p><p>The geometry of bar peeling inserts also plays a vital role in their performance. Different geometries, such as round, square, or diamond-shaped inserts, are designed for specific cutting operations and materials. The rake angle, clearance angle, and chip breaker design are essential considerations that can impact chip control, surface finish, and overall cutting efficiency. It is crucial to match the insert geometry with the specific requirements of the machining process to achieve optimal results.</p><p><br/></p><p>Furthermore, durability is a key feature to prioritize when selecting <span style="text-decoration: underline;">bar peeling inserts</span>. Inserts with a strong and reliable cutting edge can withstand the demands of high-speed machining and heavy cutting forces. Additionally, the ability to resist built-up edge and chipping is crucial for maintaining consistent and reliable performance over extended periods.</p><p><br/></p><p>In conclusion, when choosing <strong>bar peeling inserts</strong>, it is essential to consider the material composition, coating, geometry, and durability. By carefully evaluating these key features, manufacturers can select inserts that are best suited for their specific machining applications, leading to improved efficiency, higher productivity, and superior surface finish quality. Ultimately, investing in high-quality bar peeling inserts with the right features can significantly enhance the overall performance of metalworking operations.</p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

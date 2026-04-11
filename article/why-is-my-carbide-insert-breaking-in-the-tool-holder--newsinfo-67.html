@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#3340525f5640735b465d525d5640475c5c5f1d505c5e" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Why Is My Carbide Insert Breaking in the Tool Holder?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202572511247.png" style="max-width:600px;"alt="Why Is My Carbide Insert Breaking in the Tool Holder?">
+      <img class="newsimg" src="../UploadFiles/other/202572511247.png"  alt="Why Is My Carbide Insert Breaking in the Tool Holder?">
       <div class="nmore-01-context"> <p><br/></p><p>Carbide inserts are known for their hardness and durability, making them essential components in modern CNC machining. However, it can be frustrating when these inserts break unexpectedly—especially while properly mounted in a tool holder. This article will explore the most common causes of carbide insert breakage, how your tool holder setup might be contributing to the problem, and how to fix these issues to improve performance and tool life.</p><p><br/></p><h2>1. Improper Clamping or Seating in the Tool Holder</h2><p>One of the most common causes of insert breakage is incorrect clamping. If the insert is not seated firmly or aligned properly in the pocket, it may shift under cutting forces, leading to chipping or fracture.</p><ul class=" list-paddingleft-2"><li><p>Using worn or damaged clamp screws</p></li><li><p>Failing to clean the insert pocket before installation</p></li><li><p>Over-tightening or under-tightening the locking screw</p></li><li><p>Using the wrong insert geometry for the pocket shape</p></li></ul><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Always clean the tool holder pocket thoroughly, use a torque wrench to ensure proper tightening, and replace worn screws or clamps regularly.</p><p><br/></p><h2><br/></h2><h2>2. Tool Holder Misalignment or Wear</h2><p>A damaged or poorly aligned tool holder will exert uneven pressure on the insert, resulting in high stress points that can cause breakage during cutting.</p><ul class=" list-paddingleft-2"><li><p>Visible wear or burrs in the insert seat</p></li><li><p>Insert doesn’t sit flush or rocks slightly when clamped</p></li><li><p>Chips collecting inside the pocket or clamp area</p></li></ul><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Inspect the holder regularly for wear, ensure alignment with the spindle or turret, and replace worn tool holders.</p><p><br/></p><h2><br/></h2><h2>3. Using the Wrong Insert Grade or Geometry</h2><p>Different cutting materials and applications require specific carbide grades and geometries. Using a general-purpose insert for hard materials, or an insert with too sharp an edge for interrupted cutting, will often lead to breakage.</p><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Choose the correct carbide grade for the workpiece material and cutting conditions. Refer to the manufacturer&#39;s recommendation or consult a tooling expert.</p><p><br/></p><h2><br/></h2><h2>4. Excessive Cutting Parameters (Feed, Speed, or Depth)</h2><p>Even the best insert and holder combination will fail under overly aggressive cutting parameters. Feed rate, spindle speed, and depth of cut must be balanced to prevent mechanical overload on the insert.</p><ul class=" list-paddingleft-2"><li><p>Too high feed per revolution (f/rev)</p></li><li><p>Very deep cuts with insufficient rigidity</p></li><li><p>High cutting speeds without coolant</p></li></ul><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Start with conservative settings and gradually optimize. Always refer to recommended cutting parameters for the specific insert type and workpiece.</p><h2><br/></h2><h2>5. Lack of Coolant or Poor Chip Evacuation</h2><p>Overheating and chip jamming are silent killers of <a href="../index.html" target="_self">carbide inserts</a>. Without proper cooling or chip removal, the insert can suffer thermal shock or be physically damaged by recutting chips.</p><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Use high-pressure coolant systems, air blast, or through-tool coolant holders. EstoolCarbide offers&nbsp;<strong>internal coolant tool holders</strong>&nbsp;designed for optimal chip evacuation and insert cooling.</p><p><br/></p><h2><br/></h2><h2>6. Machine Vibration or Lack of Rigidity</h2><p>Vibration (chatter) creates dynamic loading on the insert edge, which carbide is particularly vulnerable to. This is often caused by long overhangs, unstable setups, or loose machine components.</p><p><strong><br/></strong></p><p><strong>Solution:</strong>&nbsp;Minimize overhang, use dampened or reinforced tool holders, and ensure the machine is leveled and stable.</p><p><br/></p><h2>Conclusion</h2><p>Carbide insert breakage in the tool holder is often a symptom of underlying issues—ranging from improper setup to incorrect cutting strategy. By ensuring the correct clamping method, matching insert grade to the job, maintaining your holders, and adjusting machining parameters, you can dramatically extend insert life and improve overall machining efficiency.</p><p>If you have any questions about choosing the right tool holders or carbide inserts, feel free to contact us anytime at EstoolCarbide.com.</p><p>&nbsp;</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

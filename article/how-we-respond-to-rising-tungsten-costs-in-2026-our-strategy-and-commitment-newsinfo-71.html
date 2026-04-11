@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#f784969b9284b79f8299969992848398989bd994989a" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How We Respond to Rising Tungsten Costs in 2026: Our Strategy and Commitment</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/20251230102528-2.png" style="max-width:600px;"alt="How We Respond to Rising Tungsten Costs in 2026: Our Strategy and Commitment">
+      <img class="newsimg" src="../UploadFiles/other/20251230102528-2.png"  alt="How We Respond to Rising Tungsten Costs in 2026: Our Strategy and Commitment">
       <div class="nmore-01-context"> <p><br/></p><p>In recent years, the global tungsten market has experienced continuous price increases due to tightening raw material supply, rising energy costs, and growing demand from high-end manufacturing industries. As tungsten powder is the core raw material of cemented carbide products, these fluctuations inevitably impact the cost structure of carbide cutting tools.</p><p>In 2026, tungsten prices are expected to remain at a relatively high level. As a professional manufacturer of carbide inserts and cutting tools, we believe transparency, stability, and long-term value are more important than short-term reactions. This article explains how we respond to rising tungsten costs — and how we continue to protect our customers’ interests.</p><p><br/></p><hr/><p><br/></p><h2>1. Why Tungsten Prices Keep Rising</h2><p>The increase in tungsten raw material prices is driven by several structural factors:</p><ul class=" list-paddingleft-2"><li><p><strong>Limited global tungsten resources</strong>, with mining highly concentrated in a few regions</p></li><li><p><strong>Stricter environmental regulations</strong>, increasing production costs</p></li><li><p><strong>Rising demand from aerospace, automotive, and energy industries</strong></p></li><li><p><strong>Higher energy and transportation costs worldwide</strong></p></li></ul><p>These factors are long-term in nature, meaning price volatility is likely to continue rather than disappear.</p><p><br/></p><hr/><p><br/></p><h2>2. Our Core Principle: Stability Over Short-Term Gains</h2><p>When facing rising material costs, our priority is not simply passing the pressure on to customers. Instead, we focus on <strong>long-term cooperation, product reliability, and cost efficiency</strong>.</p><p>Our guiding principles:</p><ul class=" list-paddingleft-2"><li><p>Maintain <strong>stable product quality</strong></p></li><li><p>Ensure <strong>consistent supply</strong></p></li><li><p>Optimize <strong>cost-performance ratio</strong></p></li><li><p>Provide <strong>transparent communication</strong></p></li></ul><p><br/></p><hr/><p><br/></p><h2>3. How We Control Costs Without Compromising Quality</h2><h3>✅ Optimized Material Utilization</h3><p>We continuously improve powder formulation and sintering processes to reduce material waste while maintaining hardness, toughness, and wear resistance.</p><h3>✅ Improved Production Efficiency</h3><p>Through upgraded equipment and refined manufacturing processes, we reduce unit production costs and improve yield consistency.</p><h3>✅ Strategic Raw Material Procurement</h3><p>We establish long-term partnerships with stable tungsten powder suppliers to minimize short-term price fluctuations and ensure steady supply.</p><h3>✅ In-House Quality Control</h3><p>From powder inspection to final product testing, every step is strictly controlled to prevent quality deviations caused by raw material changes.</p><p><br/></p><hr/><p><br/></p><h2>4. What This Means for Our Customers</h2><p>Even under rising cost pressure, our customers can continue to expect:</p><p style="padding-left: 20px;">✔ Stable product performance<br/>✔ Consistent dimensional accuracy<br/>✔ Reliable delivery schedules<br/>✔ Competitive long-term pricing<br/>✔ Technical support and application guidance</p><p>Rather than focusing only on unit price, we help customers reduce <strong>total machining cost</strong>, including:</p><ul class=" list-paddingleft-2"><li><p>Longer tool life</p></li><li><p>Reduced tool change frequency</p></li><li><p>Improved machining efficiency</p></li><li><p>Lower scrap rates</p></li></ul><p><br/></p><hr/><p><br/></p><h2>5. Our 2026 Commitment</h2><p>Looking ahead to 2026, our commitment remains clear:</p><ul class=" list-paddingleft-2"><li><p><strong>Quality first, always</strong></p></li><li><p><strong>Transparent pricing strategy</strong></p></li><li><p><strong>Continuous product optimization</strong></p></li><li><p><strong>Long-term cooperation with customers</strong></p></li><li><p><strong>Investment in R&amp;D and process improvement</strong></p></li></ul><p>We believe that real value lies not in short-term cost reductions, but in reliable performance, stable supply, and trust built over time.</p><p><br/></p><hr/><p><br/></p><p>Rising tungsten prices are a challenge shared by the entire industry. However, with responsible sourcing, efficient manufacturing, and a customer-first mindset, we are confident in our ability to deliver high-quality carbide tools without compromise.</p><p>If you would like to learn more about our products, pricing strategy, or technical solutions for your application, please feel free to contact our team. We are always ready to support your machining success.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

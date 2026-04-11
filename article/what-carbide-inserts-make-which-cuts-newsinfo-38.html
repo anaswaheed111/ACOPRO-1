@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#6112000d04122109140f000f0412150e0e0d4f020e0c" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-carbide-inserts-make-which-cuts-newsinfo-38.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-carbide-inserts-make-which-cuts-newsinfo-38.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-carbide-inserts-make-which-cuts-newsinfo-38.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-carbide-inserts-make-which-cuts-newsinfo-38.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Carbide Inserts Make Which Cuts</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023819174734.jpg" style="max-width:600px;"alt="What Carbide Inserts Make Which Cuts">
+      <img class="newsimg" src="../UploadFiles/other/2023819174734.jpg"  alt="What Carbide Inserts Make Which Cuts">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p>Carbide inserts are cutting tools used in machining processes to make various types of cuts. Different types of carbide inserts are designed for specific cutting applications. Here is a detailed explanation of carbide inserts and the cuts they are used for:</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Turning Inserts: </strong><a href="../pro_cat/turning-inserts/index.html" target="_self">Turning inserts</a> are primarily used for turning operations, which involve removing material from a workpiece to create a cylindrical shape. These inserts can be used for facing, where the cutting edge removes material from the end of the workpiece, external turning, where the cutting edge removes material from the outer diameter of the workpiece, and internal turning, where the cutting edge removes material from the inner diameter of the workpiece. Turning inserts can also be used for chamfering, grooving, and threading operations.</p></li></ul><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Milling Inserts: </strong><a href="../pro_cat/milling-inserts/index.html" target="_self">Milling inserts</a> are used in milling operations, which involve removing material from a workpiece using a rotating cutting tool. These inserts are designed for various milling applications, such as face milling, where the cutting edge removes material from the surface of the workpiece, shoulder milling, where the cutting edge removes material from the shoulder of the workpiece, and slot milling, where the cutting edge removes material to create slots or grooves. Milling inserts can have different geometries to provide specific cutting actions, such as high feed milling, roughing, and finishing.</p></li></ul><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Drilling Inserts:</strong> Drilling inserts are used in drilling operations, which involve creating holes in a workpiece. These inserts can have different point geometries, such as twist drills, center drills, and indexable drill inserts. They are designed to remove material from the workpiece by rotating and applying axial force. Drilling inserts are used for various drilling applications, including drilling holes in different materials and creating different hole sizes and shapes.</p></li></ul><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Grooving Inserts: </strong>Grooving inserts are used for making grooves, slots, or recesses in workpieces. These inserts have a specific geometry, which allows them to remove material from the workpiece to create precise grooves with different widths and depths. Grooving inserts are commonly used in applications where a groove is required, such as in the manufacturing of gears, O-rings, and other components.</p></li></ul><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Threading Inserts:</strong> Threading inserts are used for creating threads on workpieces. These inserts have different profiles, including V-shaped, square-shaped, and buttress-shaped, to produce various thread types. Threading inserts are used in applications where threads are required, such as in the manufacturing of screws, bolts, and threaded holes.</p></li></ul><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Parting Inserts: </strong>Parting inserts are used for parting-off operations, where a workpiece is separated into two parts. These inserts have a specific geometry to provide clean and accurate parting cuts. Parting inserts are commonly used in applications where a workpiece needs to be cut off or separated, such as in the manufacturing of shafts, pins, and other components.</p></li></ul><p><br/></p><p>It&#39;s important to note that the specific cutting action and performance of carbide inserts can vary depending on factors such as the material being machined, cutting speeds, feed rates, and machine conditions. Therefore, it&#39;s essential to select the appropriate insert type and geometry for each specific cutting application to achieve the desired results.</p><p><br/></p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

@@ -373,7 +373,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -409,23 +409,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#2b584a474e586b435e454a454e585f44444705484446" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="a-complete-collection-of-cnc-tools-some-of-which-you-have-never-used-newsinfo-27.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/a-complete-collection-of-cnc-tools-some-of-which-you-have-never-used-newsinfo-27.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""a-complete-collection-of-cnc-tools-some-of-which-you-have-never-used-newsinfo-27.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/a-complete-collection-of-cnc-tools-some-of-which-you-have-never-used-newsinfo-27.html">RU</a></li>
   </ul>
 </div>
 
@@ -497,7 +522,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>A Complete Collection Of CNC Tools, Some Of Which You Have Never Used</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510105419.jpg" style="max-width:600px;"alt="A Complete Collection Of CNC Tools, Some Of Which You Have Never Used">
+      <img class="newsimg" src="../UploadFiles/other/2023510105419.jpg"  alt="A Complete Collection Of CNC Tools, Some Of Which You Have Never Used">
       <div class="nmore-01-context"> <p><strong><br/></strong></p><p><span style="font-size: 18px;"><strong>Overview of CNC tools</strong></span></p><p><br/></p><p><strong>1.Definition of CNC tool:</strong></p><p><br/></p><p>CNC tools refer to the general term for various tools used in conjunction with <strong>CNC machine tools</strong> (CNC lathes, CNC milling machines, CNC drilling machines, CNC boring and milling machines, machining centers, automatic lines and flexible manufacturing systems).</p><p>&nbsp;</p><p><strong>2. Features of CNC machine tools:</strong></p><p><br/></p><p>1) Good and stable cutting performance The tool has good rigidity and high precision, and can perform high-speed cutting and powerful cutting.</p><p><br/></p><p>2) The knife has a high service life. A large number of hard alloy materials or high-performance materials are used in the knife (such as ceramic inserts, cubic boron nitride inserts, diamond composite inserts and coated inserts, etc., and high-speed steel knives are mostly high-cobalt. , high-vanadium, aluminum-containing high-performance high-speed steel and powder metallurgy high-speed steel).</p><p><br/></p><p>3) The tool (Inserts) has good interchangeability and can be changed quickly. The tool can be replaced automatically and quickly, and the auxiliary time is shortened.</p><p><br/></p><p>4) The tool has high precision. The tool is suitable for processing high-precision workpieces, especially when indexable inserts are used, because the tool</p><p>The tool body and insert have high repeatability positioning accuracy, so good processing quality can be obtained.</p><p><br/></p><p>5) The tool has reliable chip volume and chip breaking performance. The use of CNC machine tools cannot be stopped at will to process chips. Long chips appearing during processing will affect the safety of the operator and processing efficiency.</p><p><br/></p><p>6) The tool has the function of adjusting the size. The tool can be pre-adjusted outside the machine (tool setting) or compensated inside the machine to reduce the time for tool change and adjustment.</p><p><br/></p><p>7) Tools can achieve serialization, standardization and modularization Tool serialization, standardization and modularization are conducive to programming, tool management and cost reduction.</p><p><br/></p><p>8) Multifunctional composite and specialization.</p><p><br/></p><p><strong>3. The main application fields of CNC cutting tools include:</strong></p><p><strong><br/></strong></p><p>1) Automobile industry The processing characteristics of the automobile industry are firstly mass production and assembly line production, and secondly, relatively fixed processing conditions. In order to optimize production, improve quality and efficiency, the automotive industry puts forward very strict requirements on the processing efficiency and service life of cutting tools. At the same time, due to the use of assembly line operations, in order to avoid the shutdown of the entire production line due to tool change and cause huge economic losses, a mandatory unified tool change method is usually adopted. This also places uniquely high demands on the stability of the tool quality.</p><p><br/></p><p>2) Aerospace industry The processing characteristics of the aerospace industry are first, high processing precision requirements, and second, difficult processing of materials. Most of the parts and components processed in this industry are high-temperature alloys and nickel-titanium alloys (such as INCONEL718, etc.) with very high toughness and strength.</p><p><br/></p><p>3) Most of the parts to be processed by large turbine, steam turbine, generator and diesel engine manufacturers are bulky and expensive. During processing, it is very important to ensure the accuracy of the processed parts and reduce waste products. Therefore, in these industries Imported knives are often used here.</p><p><br/></p><p>4) Enterprises that use more CNC machine tools As the saying goes, &quot;a good horse is equipped with a good saddle&quot;. In order to improve processing efficiency and product quality, and give full play to the use efficiency of CNC machine tools, it is easier to achieve the expected effect by using imported tools.</p><p><br/></p><p>5) Foreign-funded enterprises In these enterprises, they often pay more attention to the guarantee of production efficiency and quality. In addition, there are many other industries, such as the mold industry, military enterprises, etc., where the application of CNC tools is also very common.</p><p><br/></p><p><span style="font-size: 18px;"><strong>CNC tool first-line brand</strong></span></p><p><span style="font-size: 18px;"><strong><br/></strong></span></p><p>① Sandvik (SANDVIK):</p><p>Sandvik Coromant is the largest metal cutting tool company under the Sandvik Group and the world&#39;s number one manufacturer and supplier of cutting tools for the metal cutting industry.</p><p><br/></p><p>②Seco (SECO):</p><p>Sweden Seco Tool Co., Ltd., one of the top ten brands of CNC tools, a world-renowned manufacturer of <a href="../index.html" target="_self" title="Carbide Cutting Tools">carbide tools</a>, is famous for its milling and turning tool and Inserts product series, and integrates R&amp;D, production and sales of various types of <span style="text-decoration: underline;">carbide tools</span> for metal processing An integrated professional enterprise.</p><p><br/></p><p>③ Walter (WALTER):</p><p>Walter Tool Co., Ltd., one of the top ten brands of CNC tools, a world-renowned machining tool brand, and one of the famous carbide tool production companies, started in Germany in 1919 and formed an advanced enterprise with a full range of tool products. One of the largest and most influential metal cutting tool companies.</p><p><br/></p><p>④Kennametal:</p><p>American Kennametal Tool Co., Ltd., one of the top ten brands of CNC cutting tools, was founded in the United States in 1938. It is a world-leading supplier of cutting tool solutions, a leading enterprise in the international mining and road construction tool industry, and a leading enterprise in the North American metal cutting industry market share. A well-known <strong>carbide tool manufacturing</strong> company.</p><p><br/></p><p>⑤Iscar (ISCAR):</p><p>Iscar Tool Co., Ltd., one of the top ten brands of <a href="../index.html" target="_self" title="CNC Cutting Tools"><em>CNC cutting tools</em></a>, one of the largest manufacturers of metal cutting tools in the world, a leader in the field of metal processing and machinery manufacturing in the world, and one of the largest and highest-level foreign-invested cutting tool manufacturers in China one.</p><p><br/></p><p>The ranking of knives in each region is also a reflection of price and quality</p><p><br/></p><p><span style="text-decoration: underline;">First</span>: European and American knives (the above types)</p><p><br/></p><p><span style="text-decoration: underline;">Second</span>: Japanese knives and Korean knives such as Mitsubishi Materials, Sumitomo Electric, Toshiba Tungaloy, Kyocera, Daijie, Hitachi, Teguk, etc.</p><p><br/></p><p><span style="text-decoration: underline;">Third</span>: Taiwanese knives such as Zhengheyuan, Zhou Turning Knives, etc. Fourth: Domestic knives such as Zhuzhou Diamond, Dongguan Nascart, Chengdu Sentai Yingge, Chengdu Qianmu, Shanggong, Harbin Engineering, etc.</p><p><br/></p><p><strong>Classification and characteristics of CNC tools</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>According to the tool structure can be divided into:</p></li></ul><p>1) Integral type: the cutting tool is integrated and made of one blank, without separation;</p><p>2) Welding type: using welding method to connect, the tool holder;</p><p>3) Machine clip type: machine clip type is divided into non-reversible and indexable; usually CNC tools adopt machine clip type!</p><p>4) Special types: such as composite cutters, shock-absorbing cutters;</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>According to the material used in the tool can be divided into:</p></li></ul><p>1) High-speed steel cutting tools;</p><p>2) Carbide cutting tools;</p><p>3) ceramic knives;</p><p>4) Ultra-high pressure sintered tool;</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>According to the tool processing method can be divided into:</p></li></ul><p>1) Turning tools: divided into outer circle, inner circle, thread, grooving, cutting tools, etc.</p><p>2) Drilling tools; including drill bits, taps, reamers, etc.</p><p>3) Boring tools;</p><p>4) Milling tools; including face milling cutters, end milling cutters, side milling cutters, etc.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

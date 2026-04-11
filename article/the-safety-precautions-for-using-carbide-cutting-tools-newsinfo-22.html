@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#e59684898096a58d908b848b8096918a8a89cb868a88" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="the-safety-precautions-for-using-carbide-cutting-tools-newsinfo-22.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/the-safety-precautions-for-using-carbide-cutting-tools-newsinfo-22.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""the-safety-precautions-for-using-carbide-cutting-tools-newsinfo-22.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/the-safety-precautions-for-using-carbide-cutting-tools-newsinfo-22.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>The safety precautions for using carbide cutting tools</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202351014462.jpg" style="max-width:600px;"alt="The safety precautions for using carbide cutting tools">
+      <img class="newsimg" src="../UploadFiles/other/202351014462.jpg"  alt="The safety precautions for using carbide cutting tools">
       <div class="nmore-01-context"> <p><span style="font-size: 18pt;"><strong><br/></strong></span></p><p><span style="font-size: 18pt;"><strong><br/></strong></span></p><p><span style="font-size: 18pt;"><strong>Carbide inserts for sale, Cemented carbide tools</strong></span></p><p><span style="font-size: 18pt;"><strong><br/></strong></span></p><p>When using <a href="../index.html">carbide cutting tools</a>, there are some factors that should be taken into consideration. The following are the safety matters. Let&#39;s reach out to learn it.</p><p><br/></p><p><strong><strong>The safety precautions for using carbide cutting tools</strong></strong><strong><strong>:</strong></strong></p><p><strong><strong><br/></strong></strong></p><ol class=" list-paddingleft-2"><li><p>The <em><em>cemented carbide material</em></em><em><em>&nbsp;</em></em>accounts for a large proportion. Especially when faced with large size and large quantity, we need to define it as a heavy project.</p></li><li><p>It may cause some troubles when <em><em>c</em></em><em><em>arbide cutter</em></em><em><em>&nbsp;</em></em>produces higher cutting temperature, dust as well as mist during grinding, which can do harm to people’s skin and eyes, and nose.</p></li><li><p>The precaution should be taken when sharpening and grinding carbide cutting tools. The wise method is that using a local vacuum device, and wearing masks, eye masks and gloves are the best options.</p></li><li><p>And it’s best to clean your dusty hands with soap and water. And the recommendation is using a vacuum cleaner to remove dust from clothes.</p></li></ol><p><br/></p><p><img src="../UploadFiles/other/11carbide-insert-suppliers-2-.jpg"/></p><p>&nbsp;</p><p><strong><strong>Estool</strong></strong><strong><strong>&nbsp;</strong></strong><strong><strong>carbide</strong></strong><strong><strong>: a </strong></strong><strong><em><strong><em>carbide inserts manufacturer</em></strong></em></strong><strong><strong>&nbsp;from China </strong></strong></p><p><strong><strong><br/></strong></strong></p><p>We offer a full range of<em><em>&nbsp;carbide inserts for sale</em></em>, including <em><em>turning inserts, tungsten carbide inserts, milling inserts, cnmg insert, cnc insert, lathe inserts, grooving inserts,</em></em>&nbsp;etc. The products have a wide application in <em><em>CNC industry</em></em>, automobile processing industry, aviation industry and other advanced processing fields. If you are interested in it, please feel free to contact us!</p><p>&nbsp;</p><p>&nbsp;</p>
         <div style="padding-top:5px;">Hot Selling:
           

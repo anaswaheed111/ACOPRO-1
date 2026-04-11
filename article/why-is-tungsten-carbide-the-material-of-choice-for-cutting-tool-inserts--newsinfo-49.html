@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#becddfd2dbcdfed6cbd0dfd0dbcdcad1d1d290ddd1d3" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="why-is-tungsten-carbide-the-material-of-choice-for-cutting-tool-inserts--newsinfo-49.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/why-is-tungsten-carbide-the-material-of-choice-for-cutting-tool-inserts--newsinfo-49.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""why-is-tungsten-carbide-the-material-of-choice-for-cutting-tool-inserts--newsinfo-49.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/why-is-tungsten-carbide-the-material-of-choice-for-cutting-tool-inserts--newsinfo-49.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Why is tungsten carbide the material of choice for cutting tool inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202441112924.png" style="max-width:600px;"alt="Why is tungsten carbide the material of choice for cutting tool inserts?">
+      <img class="newsimg" src="../UploadFiles/other/202441112924.png"  alt="Why is tungsten carbide the material of choice for cutting tool inserts?">
       <div class="nmore-01-context"> <p><br/></p><p>Tungsten carbide has emerged as the material of choice for cutting tool inserts due to its exceptional hardness, strength, and wear resistance. This unique combination of properties makes <a href="../tungsten-carbide-inserts/index.html" target="_self">tungsten carbide inserts</a> highly desirable for a wide range of cutting and machining applications. In this article, we will discuss the various reasons why tungsten carbide is the preferred material for cutting tool inserts.</p><p><br/></p><p>One of the primary reasons for the widespread use of tungsten carbide in cutting tool inserts is its remarkable hardness. Tungsten carbide is one of the hardest materials known to man, second only to diamond. This inherent hardness enables tungsten carbide inserts to withstand the high pressures and temperatures generated during cutting operations without deforming or wearing out quickly. As a result, cutting tools with <strong>tungsten carbide inserts</strong> maintain their sharp cutting edges for extended periods, thereby improving productivity and reducing the frequency of tool changes.</p><p><br/></p><p>In addition to its exceptional hardness, tungsten carbide exhibits outstanding strength and toughness. This enables tungsten carbide inserts to withstand the extreme forces and impacts encountered during cutting and machining processes. The high strength of tungsten carbide also allows for the design of cutting tool inserts with intricate geometries and complex shapes, further enhancing their effectiveness in various cutting applications.</p><p><br/></p><p>Another key advantage of <a href="../index.html" target="_self">tungsten carbide inserts</a> is their exceptional wear resistance. Tungsten carbide exhibits minimal wear even when subjected to abrasive materials and high-speed machining operations, ensuring long tool life and consistent cutting performance. This wear resistance is especially crucial in demanding machining environments where tool longevity and reliability are critical for achieving high-quality machined components.</p><p><br/></p><p>Furthermore, <em>tungsten carbide inserts</em> offer superior thermal stability, allowing them to maintain their hardness and cutting performance at elevated temperatures. This thermal stability is particularly important in high-speed machining applications and other processes that generate significant heat, as it ensures consistent cutting performance and minimizes the risk of tool failure due to thermal degradation.</p><p><br/></p><p>Moreover, the versatility of tungsten carbide enables the production of cutting tool inserts tailored to specific machining requirements. <span style="text-decoration: underline;">Tungsten carbide inserts</span> can be coated with various advanced materials such as titanium nitride, titanium carbonitride, or aluminum oxide to further enhance their performance in specific machining applications. These coatings can provide additional benefits such as improved lubricity, reduced friction, and enhanced chip evacuation, contributing to overall process efficiency and surface finish quality.</p><p><br/></p><p>In conclusion, the unique combination of exceptional hardness, strength, wear resistance, and thermal stability makes tungsten carbide the material of choice for cutting tool inserts. Its superior performance and versatility have cemented its position as a crucial component in modern machining and manufacturing industries. As technology continues to advance, tungsten carbide is likely to remain at the forefront of cutting tool materials, driving further innovation and improvements in cutting and machining processes.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

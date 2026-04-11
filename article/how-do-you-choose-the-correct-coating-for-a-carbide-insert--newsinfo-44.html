@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#542735383127143c213a353a3127203b3b387a373b39" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-do-you-choose-the-correct-coating-for-a-carbide-insert--newsinfo-44.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-do-you-choose-the-correct-coating-for-a-carbide-insert--newsinfo-44.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-do-you-choose-the-correct-coating-for-a-carbide-insert--newsinfo-44.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-do-you-choose-the-correct-coating-for-a-carbide-insert--newsinfo-44.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How do you choose the correct coating for a carbide insert?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023122711055.jpg" style="max-width:600px;"alt="How do you choose the correct coating for a carbide insert?">
+      <img class="newsimg" src="../UploadFiles/other/2023122711055.jpg"  alt="How do you choose the correct coating for a carbide insert?">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p>Choosing the correct coating for a <strong>carbide insert</strong> is a critical decision that directly impacts machining performance, tool life, and overall productivity. With a variety of coating options available, it is essential to consider several factors to ensure the optimal selection for specific machining applications.</p><p><br/></p><p>One of the primary considerations when choosing the correct coating for a <em>carbide insert</em> is the material being machined. Different coatings are designed to withstand the unique properties of various materials, such as aluminum, steel, stainless steel, or high-temperature alloys. For instance, machining abrasive materials like cast iron may require a coating with high wear resistance, while cutting aluminum may demand a coating that reduces built-up edge and chip adhesion.</p><p><br/></p><p>Another crucial factor to consider is the type of machining operation involved, whether it is turning, milling, <a href="../pro_cat/drilling-inserts/index.html" target="_self">drilling</a>, or threading. Each operation imposes different demands on the cutting tool, and the coating must be selected to withstand the specific challenges associated with the process, such as heat generation, chip formation, and tool wear.</p><p><br/></p><p>Furthermore, the cutting parameters, including cutting speed, feed rate, and depth of cut, play a significant role in determining the most suitable coating for a carbide insert. Higher cutting speeds and feeds may necessitate coatings with improved heat resistance and lubricity to withstand the increased thermal and mechanical loads.</p><p><br/></p><p style="text-align: center;"><img src="../UploadFiles/other/20231227105348.jpg" alt="20231227105348.jpg"/></p><p><br/></p><p>In addition to the application-specific requirements, it is essential to consider the properties of the available coating options. Common coatings for <a href="../index.html" target="_self">carbide inserts</a> include titanium nitride (TiN), titanium carbonitride (TiCN), aluminum titanium nitride (AlTiN), and diamond-like carbon (DLC). Each coating offers unique characteristics such as hardness, oxidation resistance, lubricity, and adhesion, which directly impact the performance of the cutting tool.</p><p><br/></p><p>The selection process also involves evaluating the cost-effectiveness of the coating. While advanced coatings may offer superior performance, they often come at a higher price. Therefore, it is important to weigh the initial investment against potential gains in productivity, tool life, and overall machining efficiency.</p><p><br/></p><p>Furthermore, consulting with tooling experts and manufacturers can provide valuable insights into the best coating options for specific machining applications. These professionals can offer guidance based on their experience and knowledge of the latest advancements in coating technologies, ensuring that the chosen coating aligns with the desired machining goals.</p><p><br/></p><p>Once the appropriate coating has been identified, it is essential to follow the recommended guidelines for applying and maintaining the coating on the carbide inserts. Proper application methods, such as physical vapor deposition (PVD) or chemical vapor deposition (CVD), and regular inspection and maintenance practices are critical to maximizing the performance and longevity of the coated carbide inserts.</p><p><br/></p><p>In conclusion, choosing the correct coating for a <span style="text-decoration: underline;">carbide insert</span> requires a comprehensive understanding of the machining requirements, properties of available coatings, and cost considerations. By carefully assessing these factors and seeking expert advice, manufacturers can optimize the performance of their cutting tools and achieve enhanced efficiency and precision in their machining operations.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

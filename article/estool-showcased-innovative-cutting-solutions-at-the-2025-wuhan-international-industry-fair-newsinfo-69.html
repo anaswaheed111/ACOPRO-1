@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#a6d5c7cac3d5e6ced3c8c7c8c3d5d2c9c9ca88c5c9cb" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Estool Showcased Innovative Cutting Solutions at the 2025 Wuhan International Industry Fair</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/20251015154126-2.png" style="max-width:600px;"alt="Estool Showcased Innovative Cutting Solutions at the 2025 Wuhan International Industry Fair">
+      <img class="newsimg" src="../UploadFiles/other/20251015154126-2.png"  alt="Estool Showcased Innovative Cutting Solutions at the 2025 Wuhan International Industry Fair">
       <div class="nmore-01-context"> <p><strong><br/></strong></p><p><strong>Wuhan, China – October 13, 2025</strong> – Estool successfully concluded its participation in the 2025 Wuhan International Industry Fair, held from <strong>October 11 to 13</strong> at the Wuhan International Expo Center. The company&#39;s booth, located at <strong>No. 2356</strong>, attracted significant attention from domestic and international visitors throughout the event.</p><p><br/></p><p><img src="../UploadFiles/other/20251015/17605144697704374.jpg" title="_20251014090943_383_85.jpg" alt="_20251014090943_383_85.jpg"/></p><p><br/></p><p>During the exhibition, Estool presented a comprehensive range of <strong>turning inserts, milling inserts, and deep hole drilling inserts</strong>, demonstrating its strong expertise in high-precision carbide tooling. The showcased products reflected Estool&#39;s ongoing commitment to technological innovation, stable performance, and long tool life—qualities that have made the brand a trusted partner for CNC machining professionals worldwide.</p><p><br/></p><p><img src="../UploadFiles/other/20251015/17605144987978483.jpg" title="_20251014090946_385_85.jpg" alt="_20251014090946_385_85.jpg"/></p><p><br/></p><p>Throughout the three-day event, Estool&#39;s technical and sales teams engaged with numerous visitors to discuss customized tooling solutions and future cooperation opportunities. The booth became a focal point for productive exchanges, where many customers expressed strong interest in Estool&#39;s advanced insert designs and machining efficiency improvements.</p><p><br/></p><p><img src="../UploadFiles/other/20251015/17605145118757414.jpg" title="_20251014090940_381_85.jpg" alt="_20251014090940_381_85.jpg"/></p><p><br/></p><p>The 2025 Wuhan International Industry Fair provided Estool with a valuable opportunity to strengthen connections with existing partners, explore new markets, and share the company&#39;s latest developments in cutting technology.</p><p><br/></p><p><img src="../UploadFiles/other/20251015/17605145241144986.jpg" title="_20251014090936_378_85.jpg" alt="_20251014090936_378_85.jpg"/></p><p><br/></p><p>Estool extends heartfelt gratitude to all visitors and partners who stopped by the booth. Moving forward, the company will continue to focus on innovation and precision manufacturing, delivering high-performance cutting tools that empower industries across the globe.</p><p><br/></p><p><strong>Estool — Precision • Performance • Partnership.</strong></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

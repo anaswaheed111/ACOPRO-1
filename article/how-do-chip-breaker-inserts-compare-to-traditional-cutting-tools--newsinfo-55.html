@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#780b19141d0b38100d1619161d0b0c171714561b1715" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How do chip breaker inserts compare to traditional cutting tools?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024830101931.png" style="max-width:600px;"alt="How do chip breaker inserts compare to traditional cutting tools?">
+      <img class="newsimg" src="../UploadFiles/other/2024830101931.png"  alt="How do chip breaker inserts compare to traditional cutting tools?">
       <div class="nmore-01-context"> <p><br/></p><p>Chip breaker inserts and traditional <a href="../index.html" target="_self">cutting tools</a> serve essential roles in machining processes, each with unique characteristics and advantages. This comparison explores their functionalities, benefits, and limitations to provide a clearer understanding of their respective roles in modern manufacturing.</p><p><br/></p><h4><span style="text-decoration: underline; font-size: 18px;"></span></h4><h4 style="text-wrap: wrap;"><span style="text-decoration: underline;"><span style="text-decoration: underline; font-size: 18px;">1.&nbsp;</span>&nbsp;<strong style="font-size: 18px;">Functionality and Design</strong></span></h4><p><strong style="font-size: 18px;"><br/></strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Chip Breaker Inserts:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Purpose</strong>: <a href="../product/cemented-carbide-blades-lathe-cutting-for-steel-cnc-triangular-turning-tool-inserts/index.html" target="_self">Chip breaker inserts</a> are designed to control the chips produced during machining, improving chip removal and reducing the risk of chip-related issues such as clogging or entanglement.</p></li><li><p><strong>Design</strong>: They feature a specialized geometry with cutting edges and a chip-breaking feature that manipulates chip flow and size. This design enhances control over the chip removal process, reducing the risk of re-cutting and improving surface finish.</p><p><br/></p></li></ul></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Traditional Cutting Tools:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Purpose</strong>: Traditional cutting tools, such as single-point tools or end mills, focus on cutting material away from a workpiece using a single or multiple cutting edges.</p></li><li><p><strong>Design</strong>: These tools generally have simpler geometries compared to chip breaker inserts. Their design is centered around cutting efficiency and tool life, without specific features for chip management.</p><p><br/></p></li></ul></ul><h4><span style="font-size: 18px; text-decoration: underline;">2.&nbsp;<strong>Performance Metrics</strong></span></h4><p><span style="font-size: 18px;"><strong><br/></strong></span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Cutting Efficiency:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><a href="../index.html" target="_self"><strong>Chip Breaker Inserts</strong></a>: These inserts often enhance cutting efficiency by breaking chips into smaller, manageable pieces, which can improve the removal rate and prevent clogging. Studies show that using chip breaker inserts can increase material removal rates by 15-25% compared to traditional tools due to improved chip flow and reduced re-cutting.</p></li><li><p><strong>Traditional Cutting Tools</strong>: They may experience reduced efficiency in operations where chip management is critical. Large chips can lead to tool wear and decreased cutting performance, particularly in high-speed or high-volume operations.</p><p><br/></p></li></ul></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Surface Finish and Precision:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Chip Breaker Inserts</strong>: The improved chip control provided by these inserts generally results in better surface finishes and higher precision. Reduced chip size minimizes re-cutting and vibration, which enhances the overall quality of the machined surface.</p></li><li><p><strong>Traditional Cutting Tools</strong>: Surface finish can vary significantly, especially if chip control is not optimized. In some cases, larger chips can lead to poor surface quality and increased tool wear.</p><p><br/></p></li></ul></ul><h4><span style="font-size: 18px; text-decoration: underline;">3.&nbsp;<strong>Tool Life and Wear</strong></span></h4><p><span style="font-size: 18px;"><strong><br/></strong></span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Chip Breaker Inserts:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Durability</strong>: The enhanced chip control and reduced re-cutting contribute to extended tool life. Inserts made from materials like carbide or ceramic can offer superior wear resistance, often outperforming traditional tools in high-speed or demanding conditions.</p></li><li><p><strong>Wear Patterns</strong>: The ability to manage chip flow effectively reduces the wear on both the tool and the workpiece, leading to longer tool life and more consistent performance.</p><p><br/></p></li></ul></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Traditional Cutting Tools:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Durability</strong>: Tool life can be shorter, especially in operations where chip management is challenging. The presence of large or irregularly shaped chips can lead to increased tool wear and frequent replacements.</p></li><li><p><strong>Wear Patterns</strong>: Tools may experience uneven wear or damage from chip re-cutting or accumulation, affecting their overall lifespan and performance.</p><p><br/></p></li></ul></ul><h4><span style="font-size: 18px; text-decoration: underline;">4.&nbsp;<strong>Cost and Application</strong></span></h4><p><span style="font-size: 18px;"><strong><br/></strong></span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Chip Breaker Inserts:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Cost</strong>: While chip breaker inserts can be more expensive due to their advanced design and materials, they can offer long-term cost benefits through improved efficiency and reduced tool wear.</p></li><li><p><strong>Application</strong>: These inserts are particularly beneficial in high-speed machining, materials that produce long or difficult-to-control chips, and operations requiring high precision and surface quality.</p><p><br/></p></li></ul></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Traditional Cutting Tools:</strong></p><ul class=" list-paddingleft-2"><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Cost</strong>: Generally less expensive than specialized chip breaker inserts, making them a cost-effective option for standard or lower-speed operations.</p></li><li><p><strong>Application</strong>: Suitable for a wide range of applications but may require additional tools or modifications to achieve optimal chip control and surface finish.</p></li></ul></ul><h3>&nbsp;</h3><p>Chip breaker inserts and traditional cutting tools each have their advantages depending on the machining application. Chip breaker inserts excel in managing chip flow, improving surface finish, and extending tool life, particularly in high-speed and precision applications. Traditional cutting tools remain a cost-effective and versatile choice for many standard machining tasks. Understanding the specific requirements of your machining process will help in selecting the most appropriate tool for achieving optimal performance and efficiency.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

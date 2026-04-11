@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#493a28252c3a09213c2728272c3a3d262625672a2624" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What should be paid attention to in the maintenance and care of cemented carbide inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024923155551.jpg" style="max-width:600px;"alt="What should be paid attention to in the maintenance and care of cemented carbide inserts?">
+      <img class="newsimg" src="../UploadFiles/other/2024923155551.jpg"  alt="What should be paid attention to in the maintenance and care of cemented carbide inserts?">
       <div class="nmore-01-context"> <p><br/></p><p>Cemented carbide inserts are widely used in various machining applications due to their exceptional hardness, wear resistance, and ability to withstand high temperatures. To maximize their lifespan and performance, proper maintenance and care are essential. This article outlines key considerations for the maintenance and care of cemented carbide inserts to ensure optimal performance and longevity.</p><p><br/></p><h2>1. Understanding Cemented Carbide Inserts</h2><p>&nbsp; &nbsp; &nbsp;Cemented carbide, often referred to as carbide, is a composite material made from tungsten carbide particles and a binder metal, typically cobalt. This combination results in a hard, durable material that is ideal for cutting tools. However, despite their toughness, cemented carbide inserts require careful handling and maintenance to prevent premature wear or damage.</p><p><br/></p><h2>2. Proper Handling Practices</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;2.1 Avoid Dropping or Bumping</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Cemented carbide inserts can be brittle, especially if subjected to shock or impact. Avoid dropping or bumping the inserts during handling and installation to prevent chipping or cracking.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;2.2 Use Appropriate Tool Holders</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Ensure that inserts are mounted in appropriate tool holders. Misalignment can lead to uneven wear or premature failure. Always use tool holders designed for the specific insert type and application.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;2.3 Clean Work Areas Regularly</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Maintain a clean and organized work area to prevent debris and contaminants from affecting the inserts. Regularly clean tools and inserts to remove built-up chips, cutting fluids, or other residues.</p><p><br/></p><h2>3. Regular Inspection</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;3.1 Visual Checks</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Perform regular visual inspections of cemented carbide inserts for signs of wear, chipping, or cracking. Early detection of damage allows for timely replacement, preventing further issues during machining.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;3.2 Measure Tool Wear</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Utilize wear measurement techniques, such as measuring the cutting edge radius, to assess the condition of inserts. Keeping track of wear rates can help determine optimal replacement intervals.</p><p><br/></p><h2>4. Cutting Parameters Optimization</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;4.1 Correct Speed and Feed Rates</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Using appropriate cutting speeds and feed rates is critical to prolonging insert life. Too high a speed can cause excessive heat and wear, while too low can lead to poor cutting performance and increased wear.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;4.2 Monitor Cutting Fluid Usage</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Effective use of cutting fluids can significantly enhance insert performance by reducing friction and heat generation. Ensure that the correct type and amount of cutting fluid is applied based on the material being machined.</p><p><br/></p><h2>5. Storage Guidelines</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;5.1 Store in a Dry Environment</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Cemented carbide inserts should be stored in a dry, temperature-controlled environment to prevent moisture accumulation, which can lead to rusting of the binder metal.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;5.2 Use Protective Containers</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Store inserts in protective containers to prevent physical damage and contamination. Use anti-static materials when necessary to avoid buildup of static electricity, which can attract dust and debris.</p><p><br/></p><h2>6. Proper Sharpening Techniques</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;6.1 Avoid Over-Sharpening</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;While re-sharpening can extend the life of inserts, it should be done cautiously. Over-sharpening can alter the insert’s geometry and reduce its effectiveness. Follow manufacturer guidelines for sharpening techniques.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;6.2 Use Appropriate Tools</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;When sharpening cemented carbide inserts, use specialized grinding tools designed for carbide materials. Conventional grinding wheels may not be suitable and can lead to excessive wear.</p><p><br/></p><h2>7. Disposal and Replacement</h2><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;7.1 Follow Proper Disposal Procedures</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;When inserts reach the end of their life cycle, ensure they are disposed of properly, following local regulations for hazardous&nbsp; &nbsp; materials. Recycling programs may be available for carbide materials.</p><p><br/></p><h3>&nbsp;&nbsp;&nbsp;&nbsp;7.2 Schedule Regular Replacements</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Establish a replacement schedule based on usage patterns and inspection findings. Regular replacement of worn inserts prevents deterioration of work quality and reduces the risk of damaging equipment.</p><p><br/></p><h2>Conclusion</h2><p><br/></p><p>Maintaining and caring for cemented carbide inserts is vital for ensuring their longevity and optimal performance. By following proper handling practices, conducting regular inspections, optimizing cutting parameters, and adhering to effective storage and sharpening techniques, users can significantly enhance the lifespan and efficiency of their carbide inserts. Investing time and resources into proper maintenance not only leads to better machining outcomes but also contributes to cost savings and improved productivity in manufacturing operations.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

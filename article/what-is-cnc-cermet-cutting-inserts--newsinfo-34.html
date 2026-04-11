@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#7003111c15033018051e111e1503041f1f1c5e131f1d" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-is-cnc-cermet-cutting-inserts--newsinfo-34.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-is-cnc-cermet-cutting-inserts--newsinfo-34.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-is-cnc-cermet-cutting-inserts--newsinfo-34.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-is-cnc-cermet-cutting-inserts--newsinfo-34.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What is CNC Cermet Cutting Inserts ?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/20237892043.jpg" style="max-width:600px;"alt="What is CNC Cermet Cutting Inserts ?">
+      <img class="newsimg" src="../UploadFiles/other/20237892043.jpg"  alt="What is CNC Cermet Cutting Inserts ?">
       <div class="nmore-01-context"> <p style="box-sizing: border-box; margin-bottom: 16px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal; margin-top: 0px !important;"><br/></p><p style="box-sizing: border-box; margin-bottom: 16px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal; margin-top: 0px !important;">CNC cermet cutting inserts, also known as <a href="../pro_cat/cermet-inserts/index.html" target="_self">cermet inserts</a>, are a type of cutting tool used in CNC (Computer Numerical Control) machining processes. Cermet is a composite material that combines ceramic and metallic elements, typically titanium carbide (TiC) and nickel (Ni). These inserts are specifically designed for high-speed cutting operations and are known for their excellent wear resistance, heat resistance, and toughness.</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal;"><strong><span style="font-size: 20px;">Here are some key features and advantages of CNC cermet cutting inserts:</span></strong></p><ol style="box-sizing: border-box; margin-bottom: 16px; padding-left: 2em; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal;" class=" list-paddingleft-2"><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Material Composition: CNC cermet cutting inserts consist of a ceramic matrix (titanium carbide) reinforced with metallic elements (nickel). This combination provides a balance of hardness, toughness, and heat resistance.</p></li><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Wear Resistance: Cermet inserts offer exceptional wear resistance, allowing them to withstand the high temperatures and abrasive forces encountered during machining. This results in extended tool life and reduced tool change frequency.</p></li><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Heat Resistance: Cermet materials have high melting points and can withstand elevated temperatures generated during high-speed cutting operations. This helps to prevent tool deformation and maintain cutting performance.</p></li><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Surface Finish: Cermet inserts can produce excellent surface finishes on the workpiece due to their sharp cutting edges and low cutting forces. This is particularly advantageous for applications that require high precision and surface quality.</p></li><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Cutting Speeds: CNC cermet cutting inserts are designed for high-speed machining applications. They can effectively handle increased cutting speeds, resulting in improved productivity and reduced machining time.</p></li><li><p style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;">Versatility: Cermet inserts can be used for a wide range of materials, including steel, stainless steel, cast iron, and heat-resistant alloys. They are suitable for both roughing and finishing operations.</p></li></ol><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal;"><strong>Chip Control: </strong>Cermet inserts are engineered to provide efficient chip control, reducing chip size and promoting chip evacuation. This helps to prevent chip clogging and improve machining efficiency.</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal;"><strong><span style="color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;;">Stability</span>: </strong>The combination of ceramic and metallic elements in cermet inserts provides stability and resistance to vibration during cutting, resulting in improved cutting performance and dimensional accuracy.</p><p><br/></p><p style="box-sizing: border-box; margin-top: 0px; color: rgb(56, 61, 65); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; white-space: normal; margin-bottom: 0px !important;">It&#39;s important to note that CNC cermet cutting inserts are specific to CNC machining processes and require appropriate tool holders and machinery for their effective use. The selection of the right cermet insert depends on factors such as the material being machined, cutting parameters, and desired machining outcomes.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

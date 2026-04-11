@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#2350424f4650634b564d424d4650574c4c4f0d404c4e" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-shapes-are-commonly-utilized-in-cnc-carbide-insert-designs--newsinfo-50.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-shapes-are-commonly-utilized-in-cnc-carbide-insert-designs--newsinfo-50.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-shapes-are-commonly-utilized-in-cnc-carbide-insert-designs--newsinfo-50.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-shapes-are-commonly-utilized-in-cnc-carbide-insert-designs--newsinfo-50.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Shapes Are Commonly Utilized in CNC Carbide Insert Designs?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024513165347.jpg" style="max-width:600px;"alt="What Shapes Are Commonly Utilized in CNC Carbide Insert Designs?">
+      <img class="newsimg" src="../UploadFiles/other/2024513165347.jpg"  alt="What Shapes Are Commonly Utilized in CNC Carbide Insert Designs?">
       <div class="nmore-01-context"> <p><br/></p><p>In the realm of Computer Numerical Control (CNC) machining, the design of cutting inserts plays a pivotal role in determining the efficiency, precision, and versatility of the machining process. CNC inserts, often made from carbide, ceramic, or other advanced materials, come in various shapes tailored to specific machining tasks and materials. Understanding the common shapes utilized in CNC insert designs is essential for optimizing machining performance across diverse applications.</p><p><br/></p><ol class=" list-paddingleft-2" style="list-style-type: upper-alpha;"><li><p><strong>Square Inserts: </strong>Square inserts, characterized by four equal sides, are one of the most ubiquitous shapes in CNC machining. They offer stability and versatility, making them suitable for a wide range of operations, including facing, profiling, and general turning. The 90-degree corners of square inserts facilitate efficient machining along straight edges and shoulders.</p><p><br/></p></li><li><p><strong>Round Inserts:</strong> Round inserts feature a circular cutting edge, providing excellent performance in contouring, profiling, and finishing operations. These inserts are particularly advantageous for achieving smooth surface finishes and maintaining dimensional accuracy in curved or radiused workpieces. Round inserts are also preferred for interrupted cuts due to their ability to distribute cutting forces evenly.</p><p><br/></p></li><li><p><strong>Triangle Inserts:</strong> Triangle inserts, characterized by three equal sides, are valued for their strength and suitability for heavy-duty machining applications. The triangular geometry allows for high feed rates and chip control, making them ideal for roughing and semi-finishing operations. The pointed corners enable efficient machining in tight spaces and corners, enhancing accessibility and reducing the need for additional tooling.</p><p><br/></p></li><li><p><strong>Diamond Inserts:</strong> Diamond inserts, featuring a rhombus or diamond-shaped cutting edge, excel in both turning and milling operations. The unique geometry of diamond inserts facilitates smooth chip evacuation and reduces cutting forces, resulting in improved surface finishes and extended tool life. These inserts are commonly used in facing, contouring, and chamfering applications, especially in materials prone to built-up edge formation.</p><p><br/></p></li><li><p><strong>Hexagonal Inserts: </strong>Hexagonal inserts, with six sides, offer a balance of stability and cutting edge accessibility. They are often employed in roughing and semi-finishing operations, where high material removal rates are desired. The multiple cutting edges of hexagonal inserts allow for efficient machining of complex geometries and contours while minimizing tool changes and setup times.</p><p><br/></p></li><li><p><strong>Octagonal Inserts:</strong> Octagonal inserts feature eight sides and are valued for their versatility and stability in a variety of machining tasks. They offer increased edge strength compared to square inserts, making them suitable for heavy cutting and interrupted machining conditions. Octagonal inserts are commonly utilized in milling, drilling, and threading applications, where reliable performance and precision are paramount.</p><p><br/></p></li><li><p><strong>Customized Inserts: </strong>Beyond standard geometries, CNC insert designs can be customized to meet specific machining requirements and challenges. Manufacturers often develop specialized insert shapes tailored to unique applications, such as aerospace components, automotive parts, and medical devices. Customized inserts may incorporate features such as chip breakers, wiper edges, and coatings optimized for particular materials and cutting conditions.</p></li></ol><p><br/></p><p>In conclusion, the selection of CNC insert shapes is influenced by factors such as the machining operation, workpiece material, surface finish requirements, and tool life considerations. By understanding the characteristics and applications of commonly utilized insert shapes, machinists can optimize their machining processes for efficiency, accuracy, and cost-effectiveness. Whether it&#39;s square, round, triangular, diamond, hexagonal, octagonal, or customized inserts, each shape offers distinct advantages that contribute to achieving superior results in CNC machining operations.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

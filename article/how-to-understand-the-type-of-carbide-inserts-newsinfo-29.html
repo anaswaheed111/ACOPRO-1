@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#c5b6a4a9a0b685adb0aba4aba0b6b1aaaaa9eba6aaa8" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-to-understand-the-type-of-carbide-inserts-newsinfo-29.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-to-understand-the-type-of-carbide-inserts-newsinfo-29.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-to-understand-the-type-of-carbide-inserts-newsinfo-29.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-to-understand-the-type-of-carbide-inserts-newsinfo-29.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How To Understand The Type Of Carbide Inserts</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202351010220.jpg" style="max-width:600px;"alt="How To Understand The Type Of Carbide Inserts">
+      <img class="newsimg" src="../UploadFiles/other/202351010220.jpg"  alt="How To Understand The Type Of Carbide Inserts">
       <div class="nmore-01-context"> <p><br/></p><p>There are many CNC carbide inserts of various shapes, uses and materials. First, let&#39;s understand the classification of cemented carbide insert turning tools.</p><p><br/></p><p><strong>According to the tool structure, it can be divided into:</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><p>Integral type: the cutter is integrated and made of one blank without separation;</p></li><li><p>Welding type: connected by welding method, including cutter head and cutter bar;</p></li><li><p>Machine clip type: machine clip type can be divided into non indexable and indexable carbide inserts.</p></li><li><p>Special types: such as compound cutter, damping cutter, etc.</p></li></ul><p><br/></p><p><strong>According to the materials used to manufacture cutting tools, they can be divided into:</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><p>High speed steel cutting tools</p></li><li><p>Tungsten inserts</p></li><li><p>Diamond tools</p></li><li><p>Other material cutting tools, such as cubic boron nitride cutting tools, ceramic cutting tools, <a href="../pro_cat/cermet-inserts/index.html" target="_self">cermet inserts</a>, etc</p></li></ul><p><br/></p><p><strong>In terms of cutting process, it can be divided into:</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><p>Carbide turning inserts</p></li><li><p>Carbide milling inserts</p></li><li><p>It is divided into outer circle, inner hole, thread, cutting tool, grooving tool, etc</p></li><li><p>Drilling tools, including drill bits, reamers, taps, etc., boring tools, milling inserts, etc.</p></li><li><p>Generally, the carbide cutter inserts model is represented by 10 numbers. In this model, the first four letters represent the characteristics of the lathe inserts, and the next six numbers represent the size and model characteristics of the carbide cutter.</p></li></ul><p><br/></p><p><a href="../product/dnmg150604-dnmg150608-dnmg150612-tm-series-tungsten-carbide-high-quality-external-lathe-cutter-tools-for-steel-cnc-turning-inserts/index.html" target="_self">DNMG150408-MS</a> is a turning tool inserts. D represents 55°diamond blade, N represents 0°rear angle of blade, M represents accuracy grade of blade manufacturing, G represents front edge surface and central hole type, 15 represents cutting edge length, value is 15mm, 04 represents blade thickness of 4.76mm, and 08 represents arc radius of tool tip of 0.8mm.</p><p><br/></p><p><strong>Specific identification method of carbide inserts</strong></p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>The first letter generally indicates the shape of CNC inserts. The commonly used ones are H, O, P, S, T, C, D and E, which are regular hexagon, regular octagon, regular pentagon, square, diamond 80 degree top angle, diamond 55 degree top angle and diamond 75 degree top angle respectively.</p><p><br/></p></li><li><p>The second letter obviously represents the blade rear angle. The commonly used letters are usually a, B, C, D, E, F, G and O. a represents the rear angle of 3 °, B is 5 °, C is 7 °, D is 15 °, E is 20 °, F is 25 °, G is 30 °, N is 0 °, P is 11 °, and O represents other rear angles.</p><p><br/></p></li><li><p>The third letter indicates the accuracy grade of the carbide tool inserts. The most commonly used are grade m and grade g. generally, the rough machining and semi finishing finishing blades are grade m, and the precision machining blades and superhard blades are generally grade G.</p><p><br/></p></li><li><p>The fourth letter indicates the front edge surface and central hole pattern (groove and hole) of the blade.</p><p><br/></p></li><li><p>There are 6 numbers in total, which are divided into three groups. The first group represents the tungsten inserts edge length, the second group represents the blade thickness, and the third group represents the arc radius of the blade tip.</p><p><br/></p></li><li><p>The following letters indicate the material of carbide cutter. There are many materials of carbide inserts, and the products produced from different materials will naturally be different. Therefore, when purchasing NC blades, we must pay attention to the material of blades, and the prices of different materials are completely different.</p></li></ul><p><br/></p><p>Generally, it is represented by two letters, mostly alloy, P represents general steel, M represents stainless steel, K represents gray cast iron or nodular cast iron, N represents aluminum / scrap metal, S represents heat-resistant alloy or titanium alloy, H represents high hardness material, etc.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

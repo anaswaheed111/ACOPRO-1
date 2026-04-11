@@ -58,6 +58,14 @@
     height: auto;
 }
 
+@media (max-width:1023px) {
+    .swiper-container, .swiper-wrapper {
+        margin-top: 30px;
+    }
+
+}
+
+
 .con-01-message,
 .pmessage-01,
 .nl_lists-01 ul li div img,

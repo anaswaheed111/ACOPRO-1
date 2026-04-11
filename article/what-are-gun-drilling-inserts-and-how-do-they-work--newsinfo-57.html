@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#285b49444d5b68405d4649464d5b5c474744064b4745" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Are Gun Drilling Inserts and How Do They Work?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024101011734.jpg" style="max-width:600px;"alt="What Are Gun Drilling Inserts and How Do They Work?">
+      <img class="newsimg" src="../UploadFiles/other/2024101011734.jpg"  alt="What Are Gun Drilling Inserts and How Do They Work?">
       <div class="nmore-01-context"> <p><br/></p><p>Gun drilling is a specialized machining process designed for producing deep, precise holes in various materials. It is widely used in industries like aerospace, automotive, mold making, and energy sectors. The success of this process relies heavily on the use of&nbsp;<strong>gun drilling inserts</strong>, which are cutting tools engineered to withstand high-pressure conditions and deliver exceptional accuracy. In this article, we will delve into what <a href="../pro_cat/deep-hole-drilling-inserts/index.html" target="_self">gun drilling inserts</a> are, their design features, materials, and how they function in the deep hole drilling process.</p><p><br/></p><hr/><p><strong><br/></strong></p><p><strong>What Are Gun Drilling Inserts?</strong></p><p><strong><br/></strong></p><p>Gun drilling inserts are cutting tools specifically designed for the gun drilling process, a technique used to produce holes with high depth-to-diameter ratios. These inserts are typically either&nbsp;<strong>solid carbide</strong>&nbsp;or&nbsp;<strong>indexable carbide tips</strong>&nbsp;mounted on a steel body. The design of gun drilling inserts allows for continuous coolant flow, which is critical for chip evacuation, heat management, and ensuring the cutting tool’s longevity.</p><p>Gun drilling inserts come in a variety of geometries depending on the application, such as single-lip, double-lip, or multi-edge designs. They are engineered to handle high-speed, high-feed drilling operations with minimal deflection and vibration, making them ideal for <a href="../pro_cat/deep-hole-drilling-inserts/index.html" target="_self">deep hole drilling</a> where precision is paramount.</p><p><br/></p><hr/><p><strong>Design Features of <a href="../pro_cat/drilling-inserts/index.html" target="_self">Gun Drilling Inserts</a></strong></p><p><strong><br/></strong></p><ol class=" list-paddingleft-2"><li><p><strong>Cutting Edge Geometry</strong><br/>The cutting edge of gun drilling inserts is designed for optimal material removal while maintaining a sharp and durable profile. Most inserts have a positive rake angle, which reduces cutting forces and improves the chip-breaking process.</p></li><li><p><strong>Coolant Channels</strong><br/>One of the key features of <em>gun drilling inserts</em> is the internal coolant channels. Coolant is delivered directly to the cutting edge, not only cooling the tool but also flushing chips out of the bore hole. This helps to maintain a clean cutting environment, reduces tool wear, and prevents clogging.</p></li><li><p><strong>Chip Breakers</strong><br/>Gun drilling inserts are often equipped with chip breakers that control the size and shape of chips produced during the cutting process. Proper chip formation and evacuation are crucial in deep hole drilling to prevent tool damage and ensure a smooth surface finish inside the bore.</p></li><li><p><strong>Material Coatings</strong><br/>Many gun drilling inserts are coated with materials like&nbsp;<strong>TiN (Titanium Nitride)</strong>&nbsp;or&nbsp;<strong>AlTiN (Aluminum Titanium Nitride)</strong>. These coatings enhance wear resistance, reduce friction, and allow the insert to maintain its cutting efficiency at higher temperatures.</p><p><br/></p></li></ol><hr/><p><strong><br/></strong></p><p><strong>How Do Gun Drilling Inserts Work?</strong></p><p><strong><br/></strong></p><p>The operation of gun drilling inserts is centered around a high-speed, continuous drilling process that creates deep and straight holes. Here’s a step-by-step breakdown of how they work:</p><p><br/></p><ol class=" list-paddingleft-2"><li><p><strong>Initial Setup</strong><br/>The workpiece is securely clamped, and the gun drilling machine is set up for the required hole depth and diameter. Gun drilling inserts are mounted onto the drill body, which is connected to a spindle capable of rotating at high speeds.</p></li><li><p><strong>Drilling Process</strong><br/>As the drill begins to rotate, the gun drilling insert comes into contact with the workpiece material. The cutting edge shears off material, creating a hole. Unlike conventional drilling, where multiple passes might be needed, gun drilling typically achieves the desired depth in a single pass.</p></li><li><p><strong>Coolant Delivery and Chip Evacuation</strong><br/>During the drilling process, high-pressure coolant is delivered through the internal channels directly to the cutting edge of the insert. This coolant serves two purposes: it cools the cutting zone and forces chips to be evacuated from the hole. Efficient chip removal is essential in deep hole drilling, as any accumulation of chips can cause tool damage or deflection, resulting in an inaccurate hole.</p></li><li><p><strong>Precision and Stability</strong><br/><span style="text-decoration: underline;">Gun drilling inserts</span> are designed to minimize deflection even when drilling holes with extreme depth-to-diameter ratios. The use of specialized geometries and stable, rigid drill bodies ensures that the hole remains straight and precise throughout the process.</p></li><li><p><strong>Finishing</strong><br/>The combination of the insert’s sharp cutting edge, efficient chip evacuation, and coolant flow results in a highly accurate, smooth, and burr-free hole. This level of precision is critical in industries such as aerospace or medical manufacturing, where hole quality can directly impact the performance of the final product.</p><p><br/></p></li></ol><hr/><p><strong><br/></strong></p><p><strong>Applications of Gun Drilling Inserts</strong></p><p><strong><br/></strong></p><p>Gun drilling inserts are used in a variety of applications, particularly where deep, narrow holes are required with extreme accuracy. Some common applications include:</p><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>Aerospace Components</strong>: Deep holes in turbine blades, landing gear, and engine components.</p></li><li><p><strong>Automotive Industry</strong>: Manufacturing of crankshafts, camshafts, and fuel injector bodies.</p></li><li><p><strong>Mold Making</strong>: Drilling cooling channels in injection molds.</p></li><li><p><strong>Energy Sector</strong>: Producing precision holes in oil and gas drilling equipment.</p><p><br/></p></li></ul><hr/><p><strong><br/></strong></p><p><strong>Selecting the Right Gun Drilling Insert</strong></p><p><strong><br/></strong></p><p>Choosing the appropriate gun drilling insert for a given application depends on several factors, including:</p><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>Material of the Workpiece</strong>: Harder materials like titanium or hardened steel require inserts with higher wear resistance and robust cutting edges.</p></li><li><p><strong>Hole Diameter and Depth</strong>: The geometry and size of the insert must match the desired hole dimensions.</p></li><li><p><strong>Surface Finish Requirements</strong>: For applications requiring high surface finish, inserts with sharp cutting edges and optimized coolant delivery are essential.</p></li><li><p><strong>Coolant Type</strong>: Depending on the material and drilling parameters, selecting the right type of coolant (oil-based, water-based) is important for optimal insert performance.</p><p><br/></p></li></ul><hr/><p><br/></p><p><strong>Gun drilling inserts</strong> are highly specialized tools designed for precision deep hole drilling. Their unique design features, including cutting-edge geometries, coolant channels, and durable coatings, allow for efficient chip evacuation and temperature control. By understanding how gun drilling inserts work and selecting the right type for your application, manufacturers can achieve the desired hole accuracy, depth, and surface finish while extending tool life. As industries continue to demand more complex and precise parts, the role of gun drilling inserts remains indispensable in modern manufacturing.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

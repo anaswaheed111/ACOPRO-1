@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#b4c7d5d8d1c7f4dcc1dad5dad1c7c0dbdbd89ad7dbd9" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Are the Differences Between NR, IR, and ER Carbide Threading Inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2025118154319.jpg" style="max-width:600px;"alt="What Are the Differences Between NR, IR, and ER Carbide Threading Inserts?">
+      <img class="newsimg" src="../UploadFiles/other/2025118154319.jpg"  alt="What Are the Differences Between NR, IR, and ER Carbide Threading Inserts?">
       <div class="nmore-01-context"> <p><br/></p><p><a href="../pro_cat/threading-inserts/index.html" target="_self">Carbide threading inserts</a> are essential tools in modern machining processes, designed to create precise and durable threads. Among the most common types are NR, IR, and ER threading inserts. Each of these inserts serves specific purposes and offers unique benefits depending on the application. Understanding their differences can help manufacturers achieve optimal results while improving efficiency and reducing costs.</p><p><br/></p><h4>1. Overview of NR, IR, and ER Threading Inserts</h4><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>NR (Neutral Threading Inserts):</strong>NR threading inserts are versatile tools used for both internal and external threading. They feature a neutral cutting angle, making them ideal for a wide range of threading applications. Their adaptability makes them a cost-effective choice for operations that require flexibility.</p></li><li><p><strong>IR (Internal Threading Inserts):</strong>IR threading inserts are specifically designed for creating internal threads. They have a cutting profile optimized for working inside holes or cavities, ensuring precision and smooth thread surfaces. These inserts are available in various thread standards and pitches to meet diverse requirements.</p></li><li><p><strong>ER (External Threading Inserts):</strong>ER threading inserts are tailored for external threading applications. With a design focused on thread stability and accuracy, they ensure high-quality threads on the outer surfaces of components. ER inserts are commonly used in industries where thread integrity is critical, such as automotive and aerospace manufacturing.</p></li></ul><h4><br/></h4><h4>2. Key Differences</h4><p><br/></p><table style="width: 100%; text-align:center; border-style: none; border-color: #cccccc; border-collapse: collapse; text-align:center; font-family: tahoma, arial, helvetica, sans-serif; font-size: 13pt; font-weight: 200; line-height: 1;" border="1"><tbody><tr class="firstRow"><th style="word-break: break-all;"><p><strong style="font-size: 13pt;">Feature</strong><strong style="font-size: 13pt;"></strong></p></th><th style="word-break: break-all;"><strong>NR Inserts</strong></th><th><strong>IR Inserts</strong></th><th style="word-break: break-all;"><p><strong><br/></strong></p><p><strong>ER Inserts</strong></p><p><strong><br/></strong></p></th></tr><tr><td><strong>Application</strong></td><td>Internal &amp; External</td><td>Internal Only</td><td>External Only</td></tr><tr><td><strong>Cutting Angle</strong></td><td>Neutral</td><td>Optimized for Internal Threads</td><td>Optimized for External Threads</td></tr><tr><td><strong>Thread Standards</strong></td><td>Broad Compatibility</td><td>Specific to Internal Threads</td><td>Specific to External Threads</td></tr><tr><td><strong>Versatility</strong></td><td>High</td><td>Specialized</td><td>Specialized</td></tr></tbody></table><h4><br/></h4><h4>3. Choosing the Right Insert</h4><p><br/></p><p>The selection of threading inserts depends on the specific application and threading requirements:</p><ul class=" list-paddingleft-2"><li><p><strong>Use NR inserts</strong> when versatility and cost efficiency are priorities, especially in shops with diverse threading needs.</p></li><li><p><strong>Choose IR inserts</strong> for precise internal threading where accuracy and surface finish are critical.</p></li><li><p><strong>Opt for ER inserts</strong> to produce robust external threads with consistent quality, especially on cylindrical components.</p></li></ul><h4><br/></h4><h4>4. Benefits of Carbide Threading Inserts</h4><p><br/></p><p>Regardless of the type, <em>carbide threading inserts</em> offer several advantages:</p><ul class=" list-paddingleft-2"><li><p><strong>Durability:</strong> Carbide materials resist wear and heat, ensuring long tool life.</p></li><li><p><strong>Precision:</strong> These inserts deliver high-accuracy threads, essential for industries like aerospace and automotive.</p></li><li><p><strong>Efficiency:</strong> Carbide threading inserts support faster machining speeds, increasing productivity.</p></li><li><p><strong>Standardization:</strong> Available in various thread standards (e.g., ISO, ANSI), they meet global manufacturing requirements.</p></li></ul><h4><br/></h4><h4>5. Conclusion</h4><p><br/></p><p>NR, IR, and ER <a href="../pro_cat/threading-inserts/index.html" target="_self"><span style="text-decoration: underline;">carbide threading inserts</span></a> each serve distinct purposes, allowing machinists to tailor their tools to specific threading tasks. By understanding their unique characteristics and applications, manufacturers can select the right insert for their needs, ensuring high-quality threads and efficient machining processes. Investing in the appropriate threading insert not only enhances production outcomes but also contributes to long-term cost savings and operational efficiency.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

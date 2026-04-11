@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#1063717c75635078657e717e7563647f7f7c3e737f7d" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="the-choice-of-lathe-indexable-inserts-cnc-inserts--newsinfo-28.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/the-choice-of-lathe-indexable-inserts-cnc-inserts--newsinfo-28.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""the-choice-of-lathe-indexable-inserts-cnc-inserts--newsinfo-28.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/the-choice-of-lathe-indexable-inserts-cnc-inserts--newsinfo-28.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>The Choice Of Lathe Indexable Inserts(CNC Inserts)</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510105248.jpg" style="max-width:600px;"alt="The Choice Of Lathe Indexable Inserts(CNC Inserts)">
+      <img class="newsimg" src="../UploadFiles/other/2023510105248.jpg"  alt="The Choice Of Lathe Indexable Inserts(CNC Inserts)">
       <div class="nmore-01-context"> <p>After getting the workpiece drawing, first select the indexable inserts with proper shape according to the requirements of the drawing. Generally, the lathe is mainly used to turn the outer circle and inner hole, cut and cut the groove, and turn the thread. The selection of inserts is determined according to the specific conditions of processing technology. Generally, the insertss with high versatility and more cutting edges on the same inserts should be selected. Select larger size for rough turning and smaller size for fine and semi fine turning. According to the technological requirements, we determine the required inserts shape, cutting edge length, tip arc, inserts thickness, inserts back angle and inserts accuracy.</p><p><br/></p><p><strong>1. Select the inserts shape&nbsp;</strong></p><p><br/></p><p>A. The inserts of the outer circleS-shape: four cutting edges, with short cutting edge (refer to the same internal cutting circle diameter), high strength of tool tip, mainly used for 75 ° and 45 ° turning tools, and used for processing through-hole in internal hole tools.</p><p><br/></p><p>T-shape: three cutting edges, long cutting edge and low strength of the tip. The inserts with the auxiliary deflection angle is often used on the general lathe to improve the strength of the tip. Mainly used for 90 ° turning tools. The inner hole turning tool is mainly used for machining blind holes and step holes.</p><p><br/></p><p>C shape: there are two kinds of sharp angles. The strength of the two tips of the 100 ° sharp angle is high, generally made into a 75 ° turning tool, which is used to rough turn the outer circle and the end face. The strength of the two edges of the 80 ° sharp angle is high, which can be used to process the end face or the cylindrical surface without changing the tool. The inner hole turning tool is generally used to process the step hole.</p><p><br/></p><p>R-shape: round edge, used for machining special arc surface, high utilization rate of inserts, but large radial force.</p><p><br/></p><p>W shape: three cutting edges and short, 80 ° sharp angle, high strength, mainly used for machining cylindrical surface and step surface on general lathe.</p><p><br/></p><p>D-shape: the two cutting edges are long, the cutting edge angle is 55 ° and the strength of the cutting edge is low, which is mainly used for profiling processing. When making a 93 ° turning tool, the cutting angle shall not be greater than 27 ° - 30 °; when making a 62.5 ° turning tool, the cutting angle shall not be greater than 57 ° - 60 °, which can be used for step hole and shallow root cleaning when processing the inner hole.</p><p><br/></p><p>V shape: two cutting edges and long, 35 ° sharp angle, low strength, used for profiling. When making 93 ° turning tool, the cutting angle shall not be greater than 50 °; when making 72.5 ° turning tool, the cutting angle shall not be greater than 70 °; when making 107.5 ° turning tool, the cutting angle shall not be greater than 35 °.</p><p><br/></p><p><span style="text-decoration: none;">B. Cutting and grooving insertss:</span></p><p><br/></p><p>1) cutting inserts:</p><p>In <a href="../product/snmm-tr-cnc-lathe-tungsten-carbide-inserts-for-steel-turning-inserts/index.html" target="_self">CNC lathe</a>, cutting inserts is usually used to press chip breaking groove shape directly. It can make chips shrink and deform laterally, cut easily and reliably. In addition, it has large side deflection angle and back angle, less cutting heat, long service life and higher price.</p><p><br/></p><p>2) grooving inserts: generally, the cutting inserts is used to cut the deep groove, and the forming inserts is used to cut the shallow groove, such as the following: vertical grooving inserts, flat grooving inserts, strip grooving inserts, step cleaning arc root groove inserts. These insertss have high groove width accuracy.</p><p><br/></p><p>3. Thread inserts: L-shaped inserts is commonly used, which can be reground and cheap, but it can&#39;t cut the top of the tooth. The thread with high cutting accuracy needs to use the inserts with good profile grinding. Because the internal and external thread have different profile sizes, they are divided into internal and external thread insertss. Their pitch is fixed and can be cut out of the crown. As a clamping method, it can be divided into two kinds: one is a inserts without hole, which is clamped by pressing up. When processing materials with high plasticity, this inserts also needs to add a baffle plate; the other is a inserts with a clamping hole and a chip breaking groove, which is clamped by a plum screw with a pressure hole.</p><p><br/></p><p><br/></p><p><strong>2. Cutting edge length</strong></p><p><br/></p><p>Cutting edge length: it shall be selected according to the back draft. Generally, the length of the cutting edge of the through groove inserts shall be ≥ 1.5 times of the back draft, and the length of the cutting edge of the closed groove inserts shall be ≥ 2 times of the back draft.</p><p><br/></p><p><br/></p><p><strong>3. tip arc</strong></p><p><br/></p><p>Tip arc: as long as the rigidity is allowed for rough turning, the larger tip arc radius can be used as far as possible, while the smaller arc radius is generally used for fine turning. However, when the rigidity is allowed, it should also be selected from the larger value, and the commonly used pressed forming circle radius is 0.4; 0.8; 1.2; 2.4, etc.</p><p><br/></p><p><br/></p><p><strong>4. inserts thickness</strong></p><p><br/></p><p>inserts thickness: the selection principle is to make the inserts have enough strength to bear the cutting force, which is usually selected according to the back feed and the feed. For example, some ceramic insertss need to choose thicker insertss.</p><p><br/></p><p><br/></p><p><strong>5. back angle of inserts</strong></p><p><br/></p><p>inserts back angle: commonly used:</p><p>0 ° code n;</p><p><br/></p><p>5 ° code B;</p><p><br/></p><p>7 ° code C;</p><p><br/></p><p>11 ° code P.</p><p><br/></p><p>0 ° back angle is generally used for rough and semi finish turning, 5 °; 7 °; 11 °, generally used for semi finish, finish turning, profiling and machining inner holes.</p><p><br/></p><p><br/></p><p><strong>6. inserts accuracy</strong></p><p><strong><br/></strong></p><p>inserts precision: there are 16 kinds of precision specified by the state for indexable insertss, among which 6 kinds are suitable for turning tools, the code is h, e, G, m, N, u, h is the highest, u is the lowest, u is used for rough and semi finish machining of general lathe, M is used for CNC lathe or m is used for CNC lathe, and G is used for higher level.</p><p><br/></p><p>After the above steps, we have basically determined what kind of inserts should be used. In the next step, we need to further check the electronic samples of inserts manufacturers, and finally determine the type of inserts to be used according to the materials and precision to be processed.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

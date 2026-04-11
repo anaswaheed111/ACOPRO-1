@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#a1d2c0cdc4d2e1c9d4cfc0cfc4d2d5cececd8fc2cecc" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-do-slot-milling-cutters-differ-from-other-types-of-milling-cutters--newsinfo-45.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-do-slot-milling-cutters-differ-from-other-types-of-milling-cutters--newsinfo-45.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-do-slot-milling-cutters-differ-from-other-types-of-milling-cutters--newsinfo-45.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-do-slot-milling-cutters-differ-from-other-types-of-milling-cutters--newsinfo-45.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How do slot milling cutters differ from other types of milling cutters?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/20231229152943.png" style="max-width:600px;"alt="How do slot milling cutters differ from other types of milling cutters?">
+      <img class="newsimg" src="../UploadFiles/other/20231229152943.png"  alt="How do slot milling cutters differ from other types of milling cutters?">
       <div class="nmore-01-context"> <p><br/></p><p><strong>Slot milling cutters</strong> are essential tools used in the manufacturing industry for cutting and shaping materials. They are designed to create slots or grooves in workpieces, and they differ from other types of milling cutters in several key ways.</p><p><br/></p><p>One significant difference between <em>slot milling cutters</em> and other milling cutters is the geometry of their cutting edges. Slot milling cutters are specifically engineered with teeth along the circumference and on the sides of the cutter, allowing them to efficiently remove material from the workpiece while creating slots of varying widths. In contrast, other milling cutters such as end mills or face mills are designed for different purposes, such as creating flat surfaces, contours, or profiles on the workpiece.</p><p><br/></p><p>Furthermore, <strong>slot milling cutters</strong> come in a variety of designs to accommodate specific machining requirements. For instance, some slot milling cutters feature straight teeth, while others have helical or staggered teeth, each suited for different cutting conditions and materials. Additionally, the flute design of slot milling cutters differs from other cutters, as they are optimized to efficiently clear chips from the cutting area, promoting better chip evacuation and preventing chip recutting, which can lead to poor surface finish or tool wear.</p><p><br/></p><p>Another distinction lies in the application of slot milling cutters. While some milling cutters are versatile and can be used for a wide range of milling operations, <a href="../product/100-original-material-cutting-tools-t-slot-milling-cutter-square-carbide-inserts-mpht060304/index.html" target="_self">slot milling cutters</a> are specifically tailored for slotting, plunging, and other related operations. This specialized focus allows slot milling cutters to excel in these tasks, delivering high precision and productivity, which may not be achievable with other types of cutters.</p><p><br/></p><p>In terms of cutting forces and toolpath, <span style="text-decoration: underline;">slot milling cutters</span> also exhibit unique characteristics. Due to their design, slot milling cutters may experience higher cutting forces compared to some other types of milling cutters, especially during interrupted cuts or heavy roughing operations. Therefore, it is crucial to apply appropriate cutting parameters and consider machine tool stability to ensure optimal performance and tool life. Additionally, the toolpath and engagement strategy involved in using slot milling cutters may differ from those of other cutters, as they are specifically optimized for slotting and plunging motions.</p><p><br/></p><p>Furthermore, the material composition and surface treatment of slot milling cutters often differ from other milling cutters to ensure superior performance in slotting operations. The choice of carbide substrates, coatings, and heat treatments, among other factors, is crucial in enhancing the cutting tool&#39;s wear resistance, cutting edge integrity, and heat dissipation characteristics, ensuring extended tool life and consistent machining quality.</p><p><br/></p><p>In conclusion, <strong>slot milling cutters</strong> are specialized cutting tools that distinguish themselves from other types of milling cutters through their unique geometry, application focus, cutting forces, and materials. These distinctions make slot milling cutters indispensable for efficiently and accurately producing slots and grooves in various workpiece materials, contributing to the advancement of manufacturing processes across industries. Understanding these differences and the specific capabilities of slot milling cutters is essential for optimizing their utilization in machining operations, ultimately leading to improved productivity and precision.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

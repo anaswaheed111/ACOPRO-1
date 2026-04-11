@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#f88b99949d8bb8908d9699969d8b8c979794d69b9795" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What Are Indexable Inserts and How Do They Work?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024715114658.png" style="max-width:600px;"alt="What Are Indexable Inserts and How Do They Work?">
+      <img class="newsimg" src="../UploadFiles/other/2024715114658.png"  alt="What Are Indexable Inserts and How Do They Work?">
       <div class="nmore-01-context"> <p><br/></p><p><a href="../indexable-inserts/index.html" target="_self" style="text-decoration: underline;">Indexable inserts</a> are a critical component in modern machining and manufacturing, revolutionizing the way tools are utilized for cutting, shaping, and finishing materials. These inserts, also known as replaceable cutting edges, are designed to be mechanically attached to a tool holder, allowing for quick replacement without the need to replace the entire tool. This article explores the fundamentals of indexable inserts, their working principles, advantages, types, and applications.</p><p><br/></p><h4>【A】. Understanding Indexable Inserts</h4><p><br/></p><p>An indexable insert is a cutting tool that can be removed, rotated, or flipped to present a fresh cutting edge to the workpiece. These inserts are typically made from hard materials such as carbide, ceramic, cermet, or polycrystalline diamond (PCD), ensuring they can withstand the high pressures and temperatures encountered during machining processes.</p><p>The primary function of an <em>indexable insert</em> is to provide a sharp, durable cutting edge that can efficiently remove material from a workpiece. They are commonly used in various machining operations including turning, milling, drilling, and threading. The inserts are held in place by tool holders designed with precise clamping mechanisms to ensure stability and accuracy during cutting.</p><p><br/></p><h4 style="text-wrap: wrap;">【B】. Working Principles</h4><p><br/></p><p>The working principle of indexable inserts revolves around their ability to be indexed or repositioned to use multiple cutting edges. A typical indexable insert has multiple edges, often three to eight, depending on its shape and design. When one edge becomes worn or damaged, the insert can be rotated to a new edge, maximizing the use of the material and reducing downtime.</p><p>The tool holder and insert are engineered to provide a secure fit, with the insert seated in a pocket of the holder and clamped firmly in place. This setup ensures that the insert remains stable during machining, preventing movement that could affect precision and surface finish.</p><p>The clamping mechanism can vary, but common methods include screws, clamps, and wedges. These mechanisms allow for quick and easy replacement of the insert, minimizing the time required for tool changes and increasing overall productivity.</p><p><br/></p><h4 style="text-wrap: wrap;">【C】. Advantages of Indexable Inserts</h4><p><br/></p><ol class=" list-paddingleft-2"><li><p><strong>Cost-Effectiveness</strong>: One of the primary advantages of <span style="text-decoration: underline;">indexable inserts</span> is their cost-effectiveness. Instead of replacing an entire tool, only the worn insert needs to be replaced, significantly reducing tooling costs.</p></li><li><p><strong>Improved Efficiency</strong>: The ability to quickly change inserts without regrinding or resetting the tool improves operational efficiency. This feature is particularly beneficial in high-volume production environments.</p></li><li><p><strong>Consistency and Precision</strong>: Indexable inserts are manufactured to high tolerances, ensuring consistent performance and precision. The use of multiple cutting edges on a single insert also enhances consistency, as each edge is designed to provide the same level of performance.</p></li><li><p><strong>Versatility</strong>: Available in a wide range of geometries and materials, indexable inserts can be tailored to specific applications, materials, and machining conditions. This versatility makes them suitable for a variety of machining tasks.</p></li><li><p><strong>Reduced Downtime</strong>: The quick changeover of inserts reduces machine downtime, contributing to higher productivity and lower labor costs.</p><p><br/></p></li></ol><h4 style="text-wrap: wrap;">【D】. Types of Indexable Inserts</h4><p><br/></p><p><em>Indexable inserts</em> come in various shapes, sizes, and materials, each suited to different applications:</p><p><br/></p><ol class=" list-paddingleft-2"><li><p><strong>Shapes</strong>: Common shapes include square, triangular, diamond, round, and octagonal. The choice of shape depends on the specific machining operation and the required cutting geometry.</p></li><li><p><strong>Materials</strong>:</p></li><ul class=" list-paddingleft-2"><li><p><strong>Carbide</strong>: Widely used for its hardness and wear resistance, carbide inserts are ideal for high-speed machining and tough materials.</p></li><li><p><strong>Ceramic</strong>: Suitable for high-temperature applications, ceramic inserts offer excellent thermal stability and wear resistance.</p></li><li><p><strong>Cermet</strong>: A composite material combining ceramic and metallic components, cermet inserts provide a balance of toughness and wear resistance.</p></li><li><p><strong>PCD and CBN</strong>: Polycrystalline diamond (PCD) and cubic boron nitride (CBN) inserts are used for ultra-hard materials and provide exceptional cutting performance and tool life.</p></li></ul><li><p><strong>Coatings</strong>: Many inserts are coated with materials such as titanium nitride (TiN), titanium carbonitride (TiCN), or aluminum oxide (Al2O3) to enhance wear resistance, reduce friction, and improve heat dissipation.</p><p><br/></p></li></ol><h4>【E】. Applications</h4><p><br/></p><p>Indexable inserts are used across a wide range of industries, including automotive, aerospace, medical, and general manufacturing. They are essential in processes such as:</p><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>Turning</strong>: Removing material from the outer diameter of a workpiece.</p></li><li><p><strong>Milling</strong>: Cutting and shaping flat or contoured surfaces.</p></li><li><p><strong>Drilling</strong>: Creating holes in a workpiece.</p></li><li><p><strong>Threading</strong>: Forming threads on the internal or external surfaces of a workpiece.</p><p><br/></p></li></ul><p>Each application benefits from the precision, durability, and efficiency offered by indexable inserts.</p><p><br/></p><p><strong>Indexable inserts</strong> represent a significant advancement in cutting tool technology, offering numerous advantages over traditional tooling methods. Their ability to be easily replaced, combined with the high performance and versatility of their cutting edges, makes them indispensable in modern machining. By understanding the working principles, benefits, and applications of indexable inserts, manufacturers can optimize their machining processes, improve productivity, and reduce costs.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

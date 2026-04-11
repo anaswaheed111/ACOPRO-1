@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#1a697b767f695a726f747b747f696e75757634797577" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-factors-should-be-considered-when-selecting-the-best-cnc-insert--newsinfo-36.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-factors-should-be-considered-when-selecting-the-best-cnc-insert--newsinfo-36.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-factors-should-be-considered-when-selecting-the-best-cnc-insert--newsinfo-36.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-factors-should-be-considered-when-selecting-the-best-cnc-insert--newsinfo-36.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What factors should be considered when selecting the best CNC insert?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023718102330.jpg" style="max-width:600px;"alt="What factors should be considered when selecting the best CNC insert?">
+      <img class="newsimg" src="../UploadFiles/other/2023718102330.jpg"  alt="What factors should be considered when selecting the best CNC insert?">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p>When selecting the best <a href="../cnc-inserts/index.html" target="_self">CNC insert</a>, several factors need to be considered to ensure optimal performance. These factors include the material being machined, cutting speed, feed rate, depth of cut, insert geometry, cutting edge design, and coating.</p><p><br/></p><p><strong>Material being machined:</strong> Different materials have different properties, such as hardness, toughness, and thermal conductivity. Therefore, specific insert materials and geometries are required for different materials. For example, carbide inserts are commonly used for machining steel and cast iron, while ceramic inserts are suitable for high-speed cutting of heat-resistant alloys.</p><p><br/></p><p><strong>Cutting speed: </strong>The cutting speed is the relative velocity between the cutting tool and the workpiece material at the cutting edge. Higher cutting speeds result in increased heat generation, requiring inserts with better heat resistance. For high-speed machining, inserts with a high thermal stability and resistance to thermal cracking are recommended.</p><p><br/></p><p><strong>Feed rate: </strong>The feed rate is the distance the cutting tool advances during each revolution. Higher feed rates require inserts with good wear resistance to withstand the increased contact forces. Inserts with wear-resistant coatings, such as TiN (titanium nitride), TiCN (titanium carbonitride), and Al2O3 (alumina), are commonly used to improve wear resistance.</p><p><br/></p><p><strong>Depth of cut:</strong> The depth of cut refers to the distance between the original surface of the workpiece and the final depth after machining. A deeper cut requires a more robust cutting edge to withstand the higher cutting forces. Inserts with a stronger cutting edge, such as those with reinforced carbide substrate or thicker coatings, are suitable for heavy cuts.</p><p><br/></p><p><strong>Insert geometry:</strong> The geometry of the insert, including the shape and angles of the cutting edges, plays a crucial role in the cutting process. Different geometries are designed for specific machining operations, such as turning, milling, drilling, and threading. Choosing the appropriate insert geometry ensures efficient chip evacuation, reduced cutting forces, and improved surface finish.</p><p><br/></p><p><strong>Cutting edge design:</strong> The design of the cutting edge, such as the rake angle and edge preparation, affects the cutting forces, chip formation, and chip evacuation. Positive rake angles reduce cutting forces and improve chip control, while negative rake angles enhance tool life and surface finish. Proper edge preparation, such as honing or chamfering, helps to reduce cutting forces and improve tool life.</p><p><br/></p><p><strong>Coating:</strong> Coatings are applied to inserts to improve wear resistance and reduce friction. Common coatings include TiN, TiCN, Al2O3, and multi-layered coatings. TiN coatings provide good wear resistance and reduce friction, while TiCN coatings offer higher hardness and better adhesion. Al2O3 coatings provide excellent thermal stability and chemical resistance. Multi-layered coatings, combining different materials, offer a combination of properties for specific applications.</p><p><br/></p><p>In conclusion, selecting the best CNC insert involves considering factors such as the material being machined, cutting speed, feed rate, depth of cut, insert geometry, cutting edge design, and coating. By considering these factors, manufacturers can choose the most suitable insert for their specific machining requirements, ensuring optimal performance and productivity.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

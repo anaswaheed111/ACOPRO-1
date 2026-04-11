@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#e291838e8791a28a978c838c8791968d8d8ecc818d8f" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-do-cnc-carbide-inserts-benefit-turning-operations--newsinfo-39.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-do-cnc-carbide-inserts-benefit-turning-operations--newsinfo-39.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-do-cnc-carbide-inserts-benefit-turning-operations--newsinfo-39.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-do-cnc-carbide-inserts-benefit-turning-operations--newsinfo-39.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How Do CNC Carbide Inserts Benefit Turning Operations?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202394114639.jpg" style="max-width:600px;"alt="How Do CNC Carbide Inserts Benefit Turning Operations?">
+      <img class="newsimg" src="../UploadFiles/other/202394114639.jpg"  alt="How Do CNC Carbide Inserts Benefit Turning Operations?">
       <div class="nmore-01-context"> <p><br/></p><p><br/></p><p><span style="text-decoration: underline;">CNC carbide inserts</span> play a crucial role in turning operations, providing numerous benefits that enhance productivity, efficiency, and precision. This article will explore these advantages in detail, highlighting the reasons why CNC carbide inserts are widely used in the manufacturing industry.</p><p><br/></p><p>First and foremost, <a href="../cnc-inserts/index.html" target="_self">CNC carbide inserts</a> offer exceptional durability. Carbide is a composite material composed of tungsten carbide particles embedded in a metallic binder, typically cobalt. This combination results in a hard and wear-resistant material that can withstand high temperatures and maintain its cutting edge for extended periods. Compared to traditional high-speed steel tools, carbide inserts have a significantly longer lifespan, reducing the need for frequent tool changes and increasing production uptime.</p><p><br/></p><p>Another crucial benefit of CNC carbide inserts is their ability to handle high cutting speeds. The hardness and heat resistance of carbide make it suitable for machining at higher speeds, allowing for faster material removal rates. This translates into reduced cycle times and increased productivity. Moreover, the ability to operate at higher cutting speeds also contributes to improved surface finish and dimensional accuracy of the turned parts.</p><p><br/></p><p>Furthermore, CNC carbide inserts offer excellent chip control. The design of the inserts, including the chip breaker geometry and the cutting edge geometry, plays a vital role in chip formation and evacuation. Proper chip control prevents chip clogging, reduces the risk of built-up edge formation, and improves chip disposal, resulting in better surface finishes and reduced tool wear. This is particularly important in turning operations where chip control can significantly impact the overall machining performance.</p><p><br/></p><p>In addition to chip control, <a href="../index.html" target="_self">CNC carbide inserts</a> provide enhanced stability and rigidity during turning operations. The inserts are designed to fit securely into the tool holder, ensuring precise positioning and minimizing tool deflection. This stability allows for higher cutting forces, enabling more aggressive machining strategies and deeper cuts. The improved rigidity also contributes to better dimensional accuracy and surface finish, as it reduces vibrations and chatter during the cutting process.</p><p><br/></p><p>Moreover, <strong>CNC carbide inserts</strong> offer versatility in terms of application. They are available in various geometries, coatings, and cutting edge preparations, allowing manufacturers to select the most suitable insert for specific machining requirements. Whether it is roughing, finishing, or threading, there is a carbide insert designed to optimize performance and achieve the desired results. This versatility enhances the overall efficiency of turning operations, as manufacturers can tailor the tooling to their specific needs.</p><p><br/></p><p>In conclusion, <em>CNC carbide inserts</em> bring numerous benefits to turning operations. Their exceptional durability, ability to handle high cutting speeds, chip control, stability, and versatility make them indispensable tools in the manufacturing industry. By using CNC carbide inserts, manufacturers can improve productivity, achieve higher precision, and reduce tooling costs, ultimately leading to enhanced competitiveness in the market.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

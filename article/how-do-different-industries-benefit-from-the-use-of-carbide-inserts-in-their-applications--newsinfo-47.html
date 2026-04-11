@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#2f5c4e434a5c6f475a414e414a5c5b404043014c4042" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="how-do-different-industries-benefit-from-the-use-of-carbide-inserts-in-their-applications--newsinfo-47.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/how-do-different-industries-benefit-from-the-use-of-carbide-inserts-in-their-applications--newsinfo-47.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""how-do-different-industries-benefit-from-the-use-of-carbide-inserts-in-their-applications--newsinfo-47.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/how-do-different-industries-benefit-from-the-use-of-carbide-inserts-in-their-applications--newsinfo-47.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How do different industries benefit from the use of carbide inserts in their applications?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2024126105510.png" style="max-width:600px;"alt="How do different industries benefit from the use of carbide inserts in their applications?">
+      <img class="newsimg" src="../UploadFiles/other/2024126105510.png"  alt="How do different industries benefit from the use of carbide inserts in their applications?">
       <div class="nmore-01-context"> <p><br/></p><p>Carbide inserts are widely used in various industries for cutting, milling, drilling, and shaping metal and other materials. These inserts offer several advantages that make them popular in industrial applications. This article discusses the benefits of carbide inserts in different industries and their impact on productivity, cost-efficiency, and performance.</p><p><br/></p><p><strong>1. Manufacturing Industry:</strong></p><p>In the manufacturing sector, <a href="../index.html" target="_self" title="Carbide Inserts">carbide inserts</a> are extensively used in metal cutting and shaping processes. The inserts are employed in machining operations such as turning, milling, and boring. Carbide inserts provide superior hardness, wear resistance, and high heat tolerance, which enables manufacturers to achieve high precision and repeatability in their production processes. The use of carbide inserts results in improved surface finish, reduced cycle times, and extended tool life, leading to increased productivity and cost savings.</p><p><br/></p><p><strong>2. Aerospace Industry:</strong></p><p>Aerospace manufacturers rely on <em>carbide inserts</em> for the machining of complex and high-strength materials such as titanium, stainless steel, and nickel-based alloys. The exceptional hardness and thermal stability of carbide inserts make them ideal for producing critical aerospace components with tight tolerances. Carbide inserts enable aerospace companies to achieve efficient material removal rates and maintain dimensional accuracy, contributing to the overall quality and performance of aircraft parts.</p><p><br/></p><p><strong>3. Automotive Industry:</strong></p><p>In the automotive sector, <span style="text-decoration: underline;">carbide inserts</span> play a vital role in the production of engine components, brake systems, transmission parts, and other automotive components. These inserts are utilized in a wide range of machining operations, including turning, milling, and grooving, to ensure precision, consistency, and durability of the manufactured parts. Carbide inserts help automotive manufacturers enhance their manufacturing processes, optimize cutting speeds, and reduce downtime, ultimately improving their competitiveness in the industry.</p><p><br/></p><p><strong>4. Energy and Heavy Machinery:</strong></p><p>Industries related to energy production and heavy machinery manufacturing benefit from the use of carbide inserts in various applications such as drilling, shaping, and forming of components used in oil and gas exploration, mining equipment, and power generation. Carbide inserts offer exceptional resistance to abrasion and sustained cutting performance, making them suitable for handling demanding materials and operating under harsh conditions. The use of carbide inserts enables companies in these sectors to achieve higher productivity, lower production costs, and increased equipment durability.</p><p><br/></p><p><strong>5. Tooling and Die Industry:</strong></p><p>In the tool and die industry, <strong>carbide inserts</strong> are utilized in the fabrication of molds, dies, and precision tooling for metal stamping, forging, and injection molding processes. The superior hardness and wear resistance of carbide inserts allow tool and die makers to achieve high-precision machining, extended tool life, and reduced maintenance requirements. Carbide inserts contribute to the production of intricate and durable tooling solutions that support various manufacturing operations across different industries.</p><p><br/></p><p>The use of <a href="../tungsten-carbide-inserts/index.html" target="_self">carbide inserts</a> offers significant benefits to a wide range of industries, including manufacturing, aerospace, automotive, energy, heavy machinery, and tooling and die. These benefits include improved cutting performance, enhanced productivity, cost-efficiency, and the ability to work with challenging materials. As technology continues to advance, carbide inserts are likely to play a critical role in driving innovation and performance improvements in industrial applications.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

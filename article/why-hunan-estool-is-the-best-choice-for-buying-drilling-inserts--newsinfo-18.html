@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#91e2f0fdf4e2d1f9e4fff0fff4e2e5fefefdbff2fefc" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="why-hunan-estool-is-the-best-choice-for-buying-drilling-inserts--newsinfo-18.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/why-hunan-estool-is-the-best-choice-for-buying-drilling-inserts--newsinfo-18.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""why-hunan-estool-is-the-best-choice-for-buying-drilling-inserts--newsinfo-18.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/why-hunan-estool-is-the-best-choice-for-buying-drilling-inserts--newsinfo-18.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Why Hunan Estool Is The Best Choice For Buying Drilling Inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510143648.jpg" style="max-width:600px;"alt="Why Hunan Estool Is The Best Choice For Buying Drilling Inserts?">
+      <img class="newsimg" src="../UploadFiles/other/2023510143648.jpg"  alt="Why Hunan Estool Is The Best Choice For Buying Drilling Inserts?">
       <div class="nmore-01-context"> <h1><br/></h1><h1>Deep Hole Drilling Inserts</h1><p>Hunan Estool is manufacturing and supplying the <a href="../pro_cat/deep-hole-drilling-inserts/index-2.html"><strong>Deep Hole Drilling Inserts</strong></a>, TNMG Insert, DCMT Insert and many other inserts. The assortment of shapes and sizes decides the cutting or expulsion of these materials from the item. This is the reason that the quality of inserts matters especially if you are looking for an industrial purpose.</p><p><br/></p><p>Most flawlessly completed metal items that are accessible for ordinary use or creation have been smoothed or wrapped up by a metal processing embed. Processing embeds are replaceable pieces that are utilized to machine extreme probably the hardest materials. A portion of the materials that they shape or cut is steel, steel, non-ferrous materials, solidified steel, cast iron, titanium, and plastic.</p><p><br/></p><p>Carbide is used in manufacturing these inserts. Using carbide permits them to be sturdy at very high temperatures and during fast applications for undertakings like penetrating, making a hole, completing, and so forth.</p><p><br/></p><p>When restricted to fundamental shapes, improvements by producers currently take into account a wide assortment of processing embed mathematical styles that are alluded to as curved, frustum, and helical. Each shape is explicit in size, figure, and resilience controlled by the temperatures, components, and assembling task that is expected of it.</p><h2>Components of Deep Hole Drilling Inserts</h2><p>A few components that will be essential to think about when buying Deep Hole Drilling Inserts are:</p><ol class=" list-paddingleft-2"><li><p>Size and Shape</p></li><li><p>Teeth, which really cuts the material</p></li><li><p>Flutes, which are the notches between the teeth</p></li><li><p>Coating that has great impacts on cutting system and tool life</p></li></ol><h3>What are the advantages of Deep Hole Drilling Inserts?</h3><p>There is a stupendous measure of power put on a processing embed while it&#39;s working. This utilization of a supplement will:</p><ol class=" list-paddingleft-2"><li><p>Ensure protected and exact machining</p></li><li><p>Give high metal expulsion rates in harsh conditions</p></li><li><p>Increase life of the tool</p></li><li><p>Provide solid execution in dry and wet machining</p><p><br/></p></li></ol><p>With long periods of involvement, Hunan Estool Co.,Ltd. are first-rate, industry tooling top picks? Solid and unbending, their cutting apparatuses or all the more explicitly, processing embeds, consider quicker machining, leave better wraps up on metal parts, and withstand higher temperatures just as velocities.</p><p><br/></p><p>Confirmation of its dependable name and imaginative items, Hunan Estool as of late acquainted significant overhauls with their items. An illustration of this is their new change from amalgam prepares to steels.</p><p><br/>Second, using progressed embed mounting where the encompassing carbide body really secured the drill body, separating them from the opposition.</p><p><br/></p><p>Hunan Estool is a notable provider of tooling and modern materials. Hunan Estool ensures exceptional execution in outrageous conditions. Their administrations cover pretty much every assembling interaction making them a dependable name all throughout.</p><p><br/></p><p>The organization has plentiful assets, progressed creation innovation, severe quality administration, and R and D group with teachers of materials science and senior designers as the center to guarantee that the items keep up with the main level in China.</p><p><br/></p><p>We have profoundly qualified and experienced workers who are giving cooperative energies in our organization which are important to make and ensure superior grade and durable inserts for our clients.</p><p><br/></p><p>For more information regarding our company or our items, visit our site - <a href="../index.html" target="_self">www.estoolcarbide.com</a>&nbsp; !</p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

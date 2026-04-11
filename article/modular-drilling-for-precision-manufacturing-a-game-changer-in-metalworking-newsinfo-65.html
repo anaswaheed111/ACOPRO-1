@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#8af9ebe6eff9cae2ffe4ebe4eff9fee5e5e6a4e9e5e7" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Modular Drilling for Precision Manufacturing: A Game-Changer in Metalworking</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202552712316.jpg" style="max-width:600px;"alt="Modular Drilling for Precision Manufacturing: A Game-Changer in Metalworking">
+      <img class="newsimg" src="../UploadFiles/other/202552712316.jpg"  alt="Modular Drilling for Precision Manufacturing: A Game-Changer in Metalworking">
       <div class="nmore-01-context"> <p><br/></p><p>In today&#39;s competitive manufacturing landscape, precision, efficiency, and cost optimization are crucial for success. <strong>Estool&#39;s modular drilling systems</strong> have emerged as a revolutionary solution in <strong>high-precision metalworking</strong>, offering exceptional performance across industries such as aerospace, automotive, energy, and general engineering. This article explores how <a href="../product/crown-drill-modular-drill-inserts-p-1248/index.html" target="_self">modular drilling</a> works, why Estool is a trusted choice, and how it is reshaping the future of industrial machining.</p><p><br/></p><h2>What Is Modular Drilling?</h2><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Modular drilling</strong> is a tooling system composed of <strong>a reusable drill body and replaceable cutting heads or inserts</strong>. This design provides unmatched flexibility and cost-efficiency, allowing users to quickly change only the worn cutting part while maintaining the base tool in place.</p><p><br/></p></li><li><p><strong>Estool modular drills</strong> are engineered with precision-ground geometries, tight tolerances, and premium-grade carbide materials to ensure long-lasting performance and consistent accuracy.</p></li></ul><p><br/></p><h2>Why Choose Estool Modular Drilling Solutions?</h2><p><br/></p><h3>✅ <strong>Precision Engineering</strong></h3><p>Estool tools are built for <strong>high concentricity and hole accuracy</strong>, ensuring minimal runout and superior surface finish even in deep hole applications.</p><h3>✅ <strong>Lower Operating Costs</strong></h3><p>Only the drill head needs to be replaced, reducing the cost per hole compared to full solid drills. Estool offers a wide range of compatible heads and inserts for different materials and conditions.</p><h3>✅ <strong>Faster Changeovers</strong></h3><p>Estool&#39;s modular systems feature <strong>quick-change designs</strong> that reduce machine downtime and allow seamless switching between tasks.</p><h3>✅ <strong>Application-Specific Design</strong></h3><p>Whether you’re machining steel, stainless steel, cast iron, or aluminum, Estool offers optimized drill heads with advanced coatings like TiAlN and PVD to <strong>extend tool life and enhance chip evacuation</strong>.</p><h3>✅ <strong>Inventory Efficiency</strong></h3><p>Estool&#39;s modular tooling system helps reduce the need for stocking full-length solid tools. A few Estool holders combined with multiple heads cover a wide range of hole sizes and depths.</p><p><br/></p><h2>Precision Manufacturing with Estool Modular Drills</h2><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><h3>Aerospace &amp; Defense</h3></li></ul><p>Estool modular drills provide the <strong>accuracy and repeatability</strong> needed for drilling in titanium alloys and composites used in aircraft structures.</p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><h3>Automotive Production</h3></li></ul><p>From engine blocks to transmission components, Estool’s tools offer <strong>fast cycle times and consistent tolerances</strong>, supporting lean and automated production lines.</p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><h3>Oil &amp; Gas, Energy Sectors</h3></li></ul><p>Estool modular systems support <strong>stable deep-hole drilling</strong> in challenging materials like alloy steel and nickel-based superalloys.</p><ul class=" list-paddingleft-2" style="list-style-type: circle;"><li><h3>CNC Machining &amp; Job Shops</h3></li></ul><p>For general engineering tasks, Estool provides <strong>versatile modular drilling solutions</strong> adaptable to various machines and production volumes.</p><p><br/></p><h2>Selecting the Right Estool Modular Drill</h2><p><br/></p><p>To achieve optimal results with Estool <a href="../product/crown-drill-modular-drill-inserts-p-1248/index.html" target="_self">modular drills</a>, consider:</p><ul class=" list-paddingleft-2"><li><p>Material type and hardness</p></li><li><p>Hole size, depth, and tolerance requirements</p></li><li><p>Machine tool capacity and coolant options</p></li><li><p>Desired surface finish and cutting speed</p></li><li><p>Insert geometry and coating compatibility</p></li></ul><p>Our team at Estool offers <strong>technical consultation and custom solutions</strong> tailored to your specific manufacturing needs.</p><h2><br/></h2><h2>Why Estool Is a Trusted Name in Metal Cutting Tools</h2><p><br/></p><p>With years of expertise in <strong>carbide tooling innovation</strong>, Estool is dedicated to delivering reliable, high-performance modular drilling solutions for industries worldwide. Our tools are manufactured to the highest standards, backed by <strong>rigorous quality control and ongoing R&amp;D</strong>.</p><h2><br/></h2><h2>Conclusion</h2><p><br/></p><p><strong>Estool modular drilling is revolutionizing precision manufacturing.</strong> By combining engineering excellence with cost-effective modularity, Estool empowers manufacturers to achieve better hole quality, reduce tool change times, and streamline production. Whether you&#39;re focused on productivity, precision, or profit—Estool modular drills are the smart choice.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

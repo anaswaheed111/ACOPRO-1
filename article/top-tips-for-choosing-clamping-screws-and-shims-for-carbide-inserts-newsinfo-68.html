@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#a9dac8c5ccdae9c1dcc7c8c7ccdaddc6c6c587cac6c4" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Top Tips for Choosing Clamping Screws and Shims for Carbide Inserts</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2025949595.jpg" style="max-width:600px;"alt="Top Tips for Choosing Clamping Screws and Shims for Carbide Inserts">
+      <img class="newsimg" src="../UploadFiles/other/2025949595.jpg"  alt="Top Tips for Choosing Clamping Screws and Shims for Carbide Inserts">
       <div class="nmore-01-context"> <p><br/></p><p>When it comes to carbide CNC inserts, the cutting edge alone does not determine machining performance. The stability of the insert in its pocket is equally important. This stability relies heavily on <strong>clamping screws</strong> and <strong>shims</strong>, two small but crucial components that ensure secure installation, accuracy, and extended tool life. Choosing the right screws and shims can reduce downtime, minimize tool breakage, and improve surface finish. Here are the top tips to guide your selection.</p><p><br/></p><hr/><h2></h2><p><br/></p><h2>1. Match Screws to Insert and Toolholder Design</h2><h2></h2><p><br/></p><p>Each <a href="../index.html" target="_self">carbide insert</a> is designed with a specific seat and clamping angle. Always use screws recommended by the toolholder manufacturer. Using mismatched screws can lead to poor seating, insert movement, or even pocket damage. Pay attention to:</p><ul class=" list-paddingleft-2"><li><p><strong>Thread size and pitch</strong></p></li><li><p><strong>Screw head shape</strong> (flat head, Torx, hex, etc.)</p></li><li><p><strong>Length</strong> to ensure full engagement without bottoming out</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>2. Consider Screw Material and Coating</h2><p><br/></p><p>High-quality screws are typically made of alloy steel with surface treatments to withstand repeated tightening. For demanding environments:</p><ul class=" list-paddingleft-2"><li><p><strong>Black oxide coating</strong> provides corrosion resistance</p></li><li><p><strong>Hardened steel</strong> offers higher torque capacity</p></li><li><p><strong>Special coatings</strong> (TiN, nickel plating) can improve wear resistance</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>3. Use the Right Torque and Wrench</h2><p><br/></p><p>Overtightening or undertightening screws is one of the most common causes of insert failure. Always follow the manufacturer’s torque specifications and use the correct torque wrench. A properly tightened screw:</p><ul class=" list-paddingleft-2"><li><p>Prevents insert vibration</p></li><li><p>Reduces the risk of screw head stripping</p></li><li><p>Ensures consistent clamping pressure</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>4. Understand the Role of Shims</h2><p><br/></p><p>Shims act as a <strong>sacrificial layer</strong> between the insert and the toolholder pocket. Their functions include:</p><ul class=" list-paddingleft-2"><li><p>Protecting the pocket from damage in case of insert breakage</p></li><li><p>Providing additional support for heavy-duty cutting</p></li><li><p>Allowing easier insert indexing and replacement</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>5. Choose the Correct Shim Type</h2><p><br/></p><p>Different cutting operations may require different shim designs:</p><ul class=" list-paddingleft-2"><li><p><strong>Flat shims</strong> for standard support</p></li><li><p><strong>Shaped shims</strong> that match the insert geometry for extra stability</p></li><li><p><strong>Coated or hardened shims</strong> for abrasive machining conditions</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>6. Maintain and Replace Regularly</h2><p><br/></p><p>Screws and shims are consumables. Worn or damaged parts compromise insert performance. Best practices include:</p><ul class=" list-paddingleft-2"><li><p>Inspect screws for wear, rust, or rounded sockets</p></li><li><p>Replace shims if chipped, deformed, or uneven</p></li><li><p>Stock spare screws and shims for quick replacement during tool changes</p><p><br/></p></li></ul><hr/><h2><br/></h2><h2>7. Balance Cost and Reliability</h2><p><br/></p><p>While it may be tempting to use generic screws and shims, the long-term cost of insert breakage and machine downtime far outweighs the small savings. OEM parts or high-quality replacements ensure consistent machining and reduce unplanned stoppages.</p><p><br/></p><hr/><h2><br/></h2><h2>Conclusion</h2><p><br/></p><p>Clamping screws and shims may seem minor compared to <a href="../tungsten-carbide-inserts/index.html" target="_self">carbide inserts</a>, but they play a critical role in machining success. By choosing the right type, maintaining proper torque, and replacing worn components in time, you can extend tool life, improve machining accuracy, and reduce overall production costs. Investing attention in these small components pays big dividends in performance and reliability.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

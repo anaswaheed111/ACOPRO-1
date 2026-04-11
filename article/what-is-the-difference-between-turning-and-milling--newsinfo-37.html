@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#6e1d0f020b1d2e061b000f000b1d1a010102400d0103" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="what-is-the-difference-between-turning-and-milling--newsinfo-37.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/what-is-the-difference-between-turning-and-milling--newsinfo-37.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""what-is-the-difference-between-turning-and-milling--newsinfo-37.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/what-is-the-difference-between-turning-and-milling--newsinfo-37.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>What is the difference between turning and milling?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023731142050.jpg" style="max-width:600px;"alt="What is the difference between turning and milling?">
+      <img class="newsimg" src="../UploadFiles/other/2023731142050.jpg"  alt="What is the difference between turning and milling?">
       <div class="nmore-01-context"> <p style="text-align: left;"><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">Turning and milling are two fundamental machining processes used in the manufacturing industry to shape and finish workpieces.&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">While both processes involve removing material from a workpiece, they differ in their approach, tooling, applications,&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">and cutting direction. Let&#39;s explore these differences in more detail.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><span style="font-size: 20px;"><strong><span style="text-wrap: nowrap;">Turning:</span></strong></span></p><p style="text-align: left;"><span style="font-size: 20px;"><strong><span style="text-wrap: nowrap;"><br/></span></strong></span></p><p style="text-align: left;"><a href="../pro_cat/turning-inserts/index.html" target="_self"><span style="text-wrap: nowrap;">Turning</span></a>&nbsp;<span style="text-wrap: nowrap;">is a machining process that involves rotating a workpiece while a cutting tool traverses along the surface of the rotating&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">workpiece. The cutting tool removes material to create the desired shape and dimensions. Key characteristics of turning include:</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap; text-decoration: none;">1. </span></strong><span style="text-wrap: nowrap;">Operation:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Workpiece Rotation: In turning, the workpiece is rotated on a lathe machine. The rotation can be continuous or intermittent,&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; depending on the desired shape and features.</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Stationary Cutting Tool: The cutting tool remains stationary while the workpiece rotates. It moves along the surface of the&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; workpiece, removing material to create the desired shape.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">2. </span></strong><span style="text-wrap: nowrap;">Tooling:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Single-Point Cutting Tools: Turning primarily utilizes single-point cutting tools, such as lathe tools. These tools have a single</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">cutting edge and are mounted on a tool holder.</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Tool Holder: The cutting tool is fixed to a tool holder that allows for adjustment and replacement of tools as needed.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">3.</span></strong><span style="text-wrap: nowrap;"> Applications:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Cylindrical and Conical Shapes: Turning is commonly used to create cylindrical or conical-shaped workpieces, such as shafts,&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">spindles, and cylindrical surfaces.</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- External and Internal Turning: External turning refers to removing material from the outer surface of the workpiece, while&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; internal turning involves removing material from internal surfaces, such as creating holes or cavities.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">4. </span></strong><span style="text-wrap: nowrap;">Cutting Direction:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Parallel to Axis of Rotation: In turning, the cutting tool moves parallel to the axis of rotation of the workpiece. This results in&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; removing material along the radial direction, creating rotational symmetry.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><span style="font-size: 20px;"><strong><span style="text-wrap: nowrap;">Milling:</span></strong></span></p><p style="text-align: left;"><span style="font-size: 20px;"><strong><span style="text-wrap: nowrap;"><br/></span></strong></span></p><p style="text-align: left;"><a href="../pro_cat/milling-inserts/index.html" target="_self"><span style="text-wrap: nowrap;">Milling</span></a><span style="text-wrap: nowrap;"> is a machining process where a rotating multi-point cutting tool removes material from a stationary or moving workpiece.&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">Milling offers more versatility in terms of shapes and features that can be created. Key characteristics of milling include:</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">1. </span></strong><span style="text-wrap: nowrap;">Operation:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Rotating Multi-Point Cutting Tool: Milling utilizes multi-point cutting tools, such as end mills or face mills. These tools have&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp;multiple cutting edges and are mounted on a rotating spindle.</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Workpiece Movement: In milling, the workpiece can remain stationary or move in different directions, depending on the desired&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; shape and features.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">2. </span></strong><span style="text-wrap: nowrap;">Tooling:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Multi-Point Cutting Tools: Milling employs multi-point cutting tools that have multiple cutting edges. These tools come in</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; various shapes and sizes, allowing for a wide range of cutting possibilities.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">3. </span></strong><span style="text-wrap: nowrap;">Applications:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Versatile Shape Creation: Milling is known for its versatility in creating different shapes and features, including flat surfaces, slots,&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; pockets, contours, and complex 3D geometries.</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Surface Finishing: Milling can also be used for surface finishing operations, such as creating smooth surfaces or adding texture.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><strong><span style="text-wrap: nowrap;">4. </span></strong><span style="text-wrap: nowrap;">Cutting Direction:</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp;- Multiple Axes Movement: Milling allows the cutting tool to move along multiple axes, including the X, Y, and Z axes. This enables&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">&nbsp; &nbsp; &nbsp; the creation of intricate shapes and contours.</span></p><p><span style="text-wrap: nowrap;"><br/></span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">In summary, turning and milling are two distinct machining processes with their own characteristics and applications. Turning is ideal&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">for cylindrical or conical workpieces, while milling offers more versatility in shape creation and is suitable for a wider range of&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">workpiece geometries. Understanding the differences between these processes helps manufacturers select the most appropriate&nbsp;</span></p><p style="text-align: left;"><span style="text-wrap: nowrap;">method for their specific machining requirements.</span></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

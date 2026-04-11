@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#e390828f8690a38b968d828d8690978c8c8fcd808c8e" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="carbide-turning-inserts-enhancing-precision-and-efficiency-in-metal-machining-newsinfo-33.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/carbide-turning-inserts-enhancing-precision-and-efficiency-in-metal-machining-newsinfo-33.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""carbide-turning-inserts-enhancing-precision-and-efficiency-in-metal-machining-newsinfo-33.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/carbide-turning-inserts-enhancing-precision-and-efficiency-in-metal-machining-newsinfo-33.html">RU</a></li>
   </ul>
 </div>
 
@@ -493,7 +518,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Carbide Turning Inserts: Enhancing Precision and Efficiency in Metal Machining</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/202377153710.jpg" style="max-width:600px;"alt="Carbide Turning Inserts: Enhancing Precision and Efficiency in Metal Machining">
+      <img class="newsimg" src="../UploadFiles/other/202377153710.jpg"  alt="Carbide Turning Inserts: Enhancing Precision and Efficiency in Metal Machining">
       <div class="nmore-01-context"> <p><br/></p><p>Carbide turning inserts play a crucial role in the field of metal machining, offering enhanced precision, durability, and efficiency. These inserts, made from tungsten carbide, have revolutionized the manufacturing industry by providing a cost-effective solution for achieving high-quality finishes and reducing production time. In this article, we will explore the key features and benefits of carbide turning inserts and their impact on metal machining processes.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Superior Hardness and Wear Resistance:</strong></p></li></ul><p>Carbide turning inserts are renowned for their exceptional hardness and wear resistance properties. The tungsten carbide material, combined with other elements, creates a robust cutting edge that can withstand high temperatures and abrasive forces during machining operations. This durability ensures extended tool life, reducing the need for frequent replacements and enhancing productivity.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Improved Cutting Speed and Feed Rates:</strong></p></li></ul><p>Due to their high hardness, <a href="../pro_cat/turning-inserts/index.html" target="_self">carbide turning inserts</a> enable increased cutting speeds and feed rates compared to traditional cutting tools. This advantage significantly reduces machining time, allowing manufacturers to achieve higher production volumes without compromising on precision. The ability to operate at higher speeds also contributes to reduced energy consumption and overall cost savings.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Enhanced Surface Finish and Dimensional Accuracy:</strong></p></li></ul><p>Carbide turning inserts deliver exceptional surface finish and dimensional accuracy, making them ideal for applications that demand tight tolerances. The sharp cutting edges and precise geometries of these inserts allow for smooth and precise material removal, resulting in superior surface finishes that require minimal post-processing. This quality improvement eliminates the need for additional finishing operations, saving time and resources.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p><strong>Versatility and Adaptability:</strong></p></li></ul><p>Carbide turning inserts come in a wide range of geometries, coatings, and chipbreaker designs, providing versatility and adaptability to various machining requirements. Manufacturers can choose inserts tailored to specific materials, such as <a href="../pro_cat/steel-inserts/index.html" target="_self">steel</a>, <a href="../pro_cat/cast-iron-inserts/index.html" target="_self">cast iron</a>, or <a href="../pro_cat/aluminum-turning-inserts/index.html" target="_self">aluminum</a>, ensuring optimal performance and efficiency. Additionally, the availability of different cutting edge designs enables customization for specific applications, further enhancing productivity and quality.</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p><strong>Cost-Effectiveness:</strong></p></li></ul><p>Although carbide turning inserts may have a higher initial cost compared to traditional cutting tools, their long tool life and improved machining efficiency make them highly cost-effective in the long run. The extended lifespan reduces tooling expenses and downtime associated with frequent replacements. Moreover, the enhanced productivity and reduced cycle times contribute to overall cost savings and improved profitability.</p><p><br/></p><p><span style="text-decoration: underline;">Carbide turning inserts</span> have revolutionized metal machining processes by offering superior hardness, wear resistance, and precision. Their ability to withstand high temperatures, deliver excellent surface finishes, and reduce machining time has made them indispensable tools in the manufacturing industry. With their versatility, cost-effectiveness, and adaptability to various materials and applications, carbide turning inserts continue to drive advancements in precision engineering and contribute to the overall growth of the industry.</p><p><br/></p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

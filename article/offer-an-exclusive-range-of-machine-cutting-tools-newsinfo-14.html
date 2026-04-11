@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#5221333e3721123a273c333c3721263d3d3e7c313d3f" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="offer-an-exclusive-range-of-machine-cutting-tools-newsinfo-14.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/offer-an-exclusive-range-of-machine-cutting-tools-newsinfo-14.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""offer-an-exclusive-range-of-machine-cutting-tools-newsinfo-14.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/offer-an-exclusive-range-of-machine-cutting-tools-newsinfo-14.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>Offer An Exclusive Range Of Machine Cutting Tools</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/zhutu3-fuben-4.jpg" style="max-width:600px;"alt="Offer An Exclusive Range Of Machine Cutting Tools">
+      <img class="newsimg" src="../UploadFiles/other/zhutu3-fuben-4.jpg"  alt="Offer An Exclusive Range Of Machine Cutting Tools">
       <div class="nmore-01-context"> <h1>Lathe Machine Cutting Tools, Indexable Carbide Inserts</h1>
 <p> Estool is a leading company which offer wide range of machines and cutting tools to fulfil people needs. We offer a huge assortment of world class metal cutting tools and carbide inserts for all kinds of machining operations to the metalworking industry. The tools are available in three basic material types: high-speed steel, tungsten carbide, and ceramic. We are one of the worldwide market leaders for cutting tools for toolmakers or private label manufacturers.</p>
 <p><a href="../product/lathe-machine-cutting-tools-tungsten-carbide-drilling-inserts-800-06t308m-c-g-for-deep-hole-machining-with-pvd-coating/index.html">Lathe Machine Cutting Tools</a> are tools used for removing parts of a workpiece. The tool help to rotate a workpiece about an axis of rotation to perform various operations such as cutting, sanding, knurling and drilling. We are offering all types of lathe tools at affordable prices and International market also.Our company provide a huge assortment of world class metal cutting tools and carbide inserts for all kinds of machining operations to the metalworking industry. We helps in shaping several material pieces in the desired shapes. Our machines are hugely versatile pieces of equipment, in large part thanks to the range of cutting tools we can accommodate.</p>

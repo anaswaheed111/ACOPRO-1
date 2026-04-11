@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#3645575a5345765e4358575853454259595a1855595b" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="index-2.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/index.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""index-2.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/index.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>How Do Finishing Inserts Differ from Roughing Inserts?</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/20248515015.png" style="max-width:600px;"alt="How Do Finishing Inserts Differ from Roughing Inserts?">
+      <img class="newsimg" src="../UploadFiles/other/20248515015.png"  alt="How Do Finishing Inserts Differ from Roughing Inserts?">
       <div class="nmore-01-context"> <p><br/></p><p>In the realm of precision machining, the choice between <a href="../index.html" target="_self">finishing inserts</a> and roughing inserts is critical to achieving desired outcomes in terms of both efficiency and quality. Understanding the fundamental differences between these two types of inserts can lead to more informed decisions, resulting in better machining performance and cost-effectiveness. This article explores these differences, backed by data and professional insights.</p><p><br/></p><h4 style="text-wrap: wrap;">1. Purpose and Application</h4><p><strong><br/></strong></p><p><strong>Roughing Inserts:</strong> Roughing inserts are designed for the initial stages of machining, where the primary goal is to remove large amounts of material quickly. They are used to bring the workpiece to a near-net shape before finishing operations.</p><p><br/></p><p><strong>Finishing Inserts:</strong> Finishing inserts, on the other hand, are used in the final stages of machining to achieve precise dimensions, smooth surfaces, and fine details. Their purpose is to perfect the workpiece&#39;s surface finish and dimensional accuracy.</p><p><br/></p><h4>2. Design and Geometry</h4><p><strong><br/></strong></p><p><strong>Roughing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Geometry:</strong> Roughing inserts typically have a more robust and aggressive geometry, with larger rake angles and deeper flutes to handle heavy material removal.</p></li><li><p><strong>Strength:</strong> They are designed to withstand higher cutting forces and are more durable under strenuous conditions.</p></li><li><p><strong>Chip Control:</strong> These inserts often feature enhanced chip breakers to manage the larger chips produced during roughing operations.</p><p><br/></p></li></ul><p><strong>Finishing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Geometry:</strong> Finishing inserts have a more delicate and precise geometry, with sharper cutting edges and smaller rake angles to achieve a fine surface finish.</p></li><li><p><strong>Precision:</strong> They are optimized for low cutting forces and minimal tool deflection, ensuring high dimensional accuracy.</p></li><li><p><strong>Chip Control:</strong> The chip breakers on finishing inserts are designed to produce smaller, more manageable chips, reducing the risk of surface damage.</p><p><br/></p></li></ul><h4>3. Cutting Conditions</h4><p><br/></p><p><strong>Roughing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Feed Rate:</strong> Higher feed rates (e.g., 0.5-1.0 mm/rev) are common, maximizing material removal rate.</p></li><li><p><strong>Cutting Speed:</strong> Moderate cutting speeds (e.g., 100-200 m/min) are used to balance tool life and productivity.</p></li><li><p><strong>Depth of Cut:</strong> Greater depths of cut (e.g., 3-10 mm) are typical to remove more material per pass.</p><p><br/></p></li></ul><p><strong>Finishing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Feed Rate:</strong> Lower feed rates (e.g., 0.1-0.3 mm/rev) are employed to enhance surface finish and precision.</p></li><li><p><strong>Cutting Speed:</strong> Higher cutting speeds (e.g., 200-400 m/min) can be used due to lower cutting forces, improving surface quality.</p></li><li><p><strong>Depth of Cut:</strong> Shallow depths of cut (e.g., 0.1-1.0 mm) are standard to achieve the desired surface finish and accuracy.</p><p><br/></p></li></ul><h4>4. Material and Coatings</h4><p><br/></p><p><strong>Roughing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Material:</strong> Typically made from tough materials like C5-C6 grade carbide, capable of withstanding high impact forces.</p></li><li><p><strong>Coatings:</strong> Often coated with wear-resistant materials such as TiN, TiCN, or Al2O3 to extend tool life under harsh conditions.</p></li></ul><p><strong><br/></strong></p><p><strong>Finishing Inserts:</strong></p><ul class=" list-paddingleft-2"><li><p><strong>Material:</strong> Made from high-precision grades of carbide, such as C2-C3, designed for sharpness and accuracy.</p></li><li><p><strong>Coatings:</strong> Coated with fine-grained, high-performance materials like PVD TiAlN, which enhance wear resistance and reduce friction, leading to superior surface finishes.</p><p><br/></p></li></ul><h4>5. Performance Data</h4><p><br/></p><p>To illustrate the differences in performance, consider the following data from a comparative study of roughing and finishing inserts in turning operations:</p><p><br/></p><ul class=" list-paddingleft-2"><li><p><strong>Material Removal Rate (MRR):</strong></p></li><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p>Roughing Insert: 1500 cm³/min</p></li><li><p>Finishing Insert: 300 cm³/min</p></li></ul><li><p><strong>Surface Roughness (Ra):</strong></p></li><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p>Roughing Insert: 3.2 µm</p></li><li><p>Finishing Insert: 0.8 µm</p></li></ul><li><p><strong>Tool Life:</strong></p></li><ul class=" list-paddingleft-2" style="list-style-type: square;"><li><p>Roughing Insert: 60 minutes</p></li><li><p>Finishing Insert: 120 minutes</p><p><br/></p></li></ul></ul><p>This data highlights the roughing insert&#39;s capability to remove material rapidly at the expense of surface finish, while the finishing insert excels in achieving a fine surface finish and longer tool life under less aggressive conditions.</p><p>&nbsp;</p><p>The choice between roughing and finishing inserts is guided by the specific requirements of the machining process. Roughing inserts are indispensable for their efficiency in material removal and durability under high-stress conditions. In contrast, finishing inserts are essential for achieving precision and superior surface quality. By understanding these differences, machinists can optimize their processes, balancing productivity and quality to meet diverse manufacturing needs.</p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           

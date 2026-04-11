@@ -372,7 +372,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </header>
 <span class="gotops" title="top" style="display: inline;">top</span>
 <div class="clean"></div>
-<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-50.png" data-now="true" data-src="/css/logo-50.png" alt="Tungsten Carbide Inserts"/> </a> </div>
+<div class="mlogo-60" id="hlogo"> <a href="../index.html" rel="nofollow"> <img src="../css/logo-80-bai.png" data-now="true" style="w" alt="Tungsten Carbide Inserts"/> </a> </div>
 <!-- Mobile start-->
 
 <div class="mheader-60">
@@ -408,23 +408,48 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
       </div>
     </li>
-    <li> <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
-      <div class="mheader-60-mb"></div>
-      <div class="mheader-60-search">
-        <ul>
-          <li>
-            <form action="https://www.estoolcarbide.com/search.asp">
-              <input type="text" id="" value="" name="this_search" placeholder="search for...">
-              <input type="submit" id="" value="Search">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </li>
+    <div class="lang-switcher">
+    <button onclick="changeLang('ar')">ar</button>
+    <button onclick="changeLang('en')">en</button>
+</div>
+
+<script>
+function changeLang(lang) {
+    // 1. حفظ اللغة في الـ Local Storage
+    localStorage.setItem("site_lang", lang);
+    
+    var domain = window.location.hostname;
+    
+    // 2. إعداد الكوكيز (السر في ثبات اللغة وسرعة التحميل)
+    if (lang === 'en') {
+        // العودة للأصل: مسح الكوكيز
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    } else {
+        // التحويل للعربية: وضع الكوكيز قبل الريفرش
+        document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+        document.cookie = "googtrans=/en/" + lang + "; path=/";
+    }
+
+    // 3. الخطوة الأهم: ريفرش إجباري بعد 100 ملي ثانية لضمان حفظ الكوكيز
+    setTimeout(function() {
+        location.reload();
+    }, 100);
+}
+
+// تحديث النصوص (اختياري لو محتاجه)
+window.addEventListener("DOMContentLoaded", () => {
+    var savedLang = localStorage.getItem("site_lang") || 'en';
+    var langText = document.getElementById('current-lang-text');
+    if (langText) {
+        langText.innerText = (savedLang === 'ar') ? 'العربية' : 'Language';
+    }
+});
+</script>
     <li> <a href="../cdn-cgi/l/email-protection.html#6d1e0c01081e2d0518030c03081e19020201430e0200" rel="nofollow"><i class="fa fa-envelope"></i></a> </li>
     
-    <li class="lang"><a href="eas-tool-offer-top-quality-carbide-inserts-newsinfo-19.html">EN</a></li>
-    <li class="lang"><a href="https://ru.estoolcarbide.com/article/eas-tool-offer-top-quality-carbide-inserts-newsinfo-19.html">RU</a></li>
+     <li class="lang" style="display: none;"><a href=""eas-tool-offer-top-quality-carbide-inserts-newsinfo-19.html">EN</a></li>
+     <li class="lang" style="display: none;"><a href=""https://ru.estoolcarbide.com/article/eas-tool-offer-top-quality-carbide-inserts-newsinfo-19.html">RU</a></li>
   </ul>
 </div>
 
@@ -496,7 +521,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="nmore_r-01-title">
         <h1>ESTool Offer Top Quality Carbide Inserts</h1>
       </div>
-      <img class="newsimg" src="../UploadFiles/other/2023510142328.jpg" style="max-width:600px;"alt="ESTool Offer Top Quality Carbide Inserts">
+      <img class="newsimg" src="../UploadFiles/other/2023510142328.jpg"  alt="ESTool Offer Top Quality Carbide Inserts">
       <div class="nmore-01-context"> <h1><br/></h1><h1>Grooving Inserts, Indexable Carbide Inserts</h1><p>EAS Tool Is leader in solar racking, engineering, design and production of turnkey, ground mount racking answers for business to application-scale sun tasks. With a long time of enjoy in structural engineering and aluminium and metallic fabrication and extra than 1 gigawatt set up, we promises the maximum technologically advanced sun racking answers within the enterprise. We are able to supply a remarkable intensity of carbide insurance-perfect for excessive deviation drilling in abrasive formations.</p><p><br/></p><p>Our company gives <a href="../pro_cat/milling-indexable-inserts/index.html" target="_self">Indexable Carbide Inserts</a>, imperative spiral blade stabilizer, replaceable sleeve stabilizer, non-rotary stabilizer, diameter changeable stabilizer and many others. The inserts had been developed to allow bloodless insertion and keep near suit. A extraordinary attention of inserts on the bottom 0.33 of the blade and leading area will boom floor contact to reduce wear in tremendously abrasive formations.</p><p><br/></p><p>Our technique applies tough <a href="../pro_cat/parting-and-grooving-inserts/index.html" target="_self">Grooving Inserts</a> of various sizes held in a nickel chrome matrix which provided incredible bonding residences and greater floor put on characteristics are finished. The machine provides the capacity to depart the boundary microphone within the drum throughout transport and is also stated to growth the responsiveness of the microphone’s performance. The well designed shape of the mounting unit reliably encapsulates the microphone with no worry of it unfavourable the inner of the drum shell between gigs, no matter wherein orientation the drum is handled.</p><p><br/></p><p>Threading Inserts is a devoted stabilization and isolation gadget designed to house boundary microphones which are used for kick drum packages. &nbsp;We&#39;re a dedicated kick drum microphone shock-mount isolation and stabilizing platform which installs in mins without a drilling required. The device makes use of existing tuning hardware within the drum for attaching the covered stable rubber guide.</p><p><br/></p><p>Use of the machine presents the capacity to go away the boundary microphone inside the drum for the duration of delivery and is also stated to boom the responsiveness of the microphone’s performance. The well designed form of the mounting unit reliably encapsulates the microphone and not using a fear of it unfavourable the inside of the drum shell among gigs, irrespective of in which orientation the drum is handled.</p><p><br/></p><p><br/></p>
         <div style="padding-top:5px;">Hot Selling:
           
