@@ -92,6 +92,7 @@
     color: #333333;
     font-family: "Arial", Sans-serif;
     font-size: 30px;
+    margin-top: 29px;
 }
 
 .elementor-453 .elementor-element.elementor-element-dd7e68c {
@@ -163,7 +164,7 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-a0073a6 {
     font-family: "Arial", Sans-serif;
     font-size: 30px;
     text-transform: uppercase;
-    margin-top: 56px;
+    margin-top: 39px;
 }
 
 .elementor-453 .elementor-element.elementor-element-c0907e1 .elementor-text-editor {
@@ -188,8 +189,8 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-a0073a6 {
 }
 
 .elementor-453 .elementor-element.elementor-element-8d1b80e .elementor-posts-container {
-    grid-column-gap: 30px;
-    grid-row-gap: 35px;
+    grid-column-gap: 15px;
+    grid-row-gap: 40px;
 }
 
 .elementor-msie .elementor-453 .elementor-element.elementor-element-8d1b80e .elementor-post {
@@ -237,8 +238,7 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
 .elementor-453 .elementor-element.elementor-element-acf7abf {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0px;
-    padding: 20px 0px 40px 0px;
-    margin-bottom: 40px;
+    padding: 20px 0px 80px 0px;
 }
 
 .elementor-453 .elementor-element.elementor-element-acf7abf>.elementor-background-overlay {
@@ -252,10 +252,11 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
 .elementor-453 .elementor-element.elementor-element-5331bae.elementor-column.elementor-element[data-element_type="column"]>.elementor-column-wrap.elementor-element-populated>.elementor-widget-wrap {
     align-content: center;
     align-items: center;
+
 }
 
 .elementor-453 .elementor-element.elementor-element-5331bae>.elementor-element-populated {
-    padding: 10px 60px 10px 10px;
+    padding: 10px 70px 10px 70px;
 }
 
 .elementor-453 .elementor-element.elementor-element-8e7b2bb .elementor-heading-title {
@@ -380,7 +381,7 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
     }
 
     .elementor-453 .elementor-element.elementor-element-5331bae>.elementor-element-populated {
-        padding: 10px 10px 10px 10px;
+        padding: 10px 15px 10px 15px;
     }
 }
 
@@ -398,5 +399,5 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
 
 .swiper-wrapper li {
     padding: 10px;
-    width: 25%
+    flex: 1;
 }
