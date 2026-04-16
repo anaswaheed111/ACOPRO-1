@@ -2992,37 +2992,30 @@ html[lang="ar"] .nlist-01-con {
 
 .gotops {
 	position: fixed;
-	display: none;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	right: .17rem;
-	bottom: 1.3rem;
-	background: #1F1F1F;
-	border-radius: 50%;
-	cursor: pointer;
-	color: #fff;
-	text-transform: capitalize;
-	box-shadow: 0 0 0.12rem rgba(163, 208, 143, .8);
-	-webkit-animation: tm-bounce 2.0s infinite ease-in-out;
-	animation: tm-bounce 2.0s infinite ease-in-out;
-	z-index: 9999;
-	opacity: 1;
+    display: none;
+    width: 48px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    right: .17rem;
+    bottom: 1.3rem;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    z-index: 9999;
+    opacity: 1;
+    background: rgb(14 41 79);
+    backdrop-filter: blur(15px) saturate(180%);
+    border: 1.5px solid rgb(3 0 221 / 20%);
+    box-shadow: 1px 0px 11px 2px rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+    transform: scale(1.09);
 }
+.fa-angles-up::before{
+	content: "\f102";
+    font-family: fontawesome;
+    font-size: x-large;
 
-@-webkit-keyframes tm-bounce {
-
-	0%,
-	100% {
-		-webkit-transform: scale(.8);
-		transform: scale(.8);
-	}
-
-	50% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
 }
 
 .leave-message-dialog ul,
