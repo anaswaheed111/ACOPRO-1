@@ -5663,3 +5663,8 @@ body {
 .mheader-60 ul li:nth-child(5){
     display: none !important;
 }
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* لزيادة التوافق */
+}

@@ -285,6 +285,7 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
     color: #333333;
     font-size: 18px;
     line-height: 1.6em;
+    word-break: break-all;
 }
 
 .elementor-453 .elementor-element.elementor-element-638a693:not(.elementor-motion-effects-element-type-background)>.elementor-column-wrap,
