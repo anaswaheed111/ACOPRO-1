@@ -688,6 +688,9 @@
     .elementor-452 .elementor-element.elementor-element-70a94d10 .elementor-heading-title {
         font-size: 50px;
     }
+    html[lang="ar"] .elementor-452 .elementor-element.elementor-element-70a94d10 .elementor-heading-title {
+        direction: rtl !important;
+    }
 
     .elementor-452 .elementor-element.elementor-element-98836a8 {
         font-size: 14px;

@@ -285,8 +285,9 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
     color: #333333;
     font-size: 18px;
     line-height: 1.6em;
-    word-break: break-all;
+    word-break: break-word;
 }
+
 
 .elementor-453 .elementor-element.elementor-element-638a693:not(.elementor-motion-effects-element-type-background)>.elementor-column-wrap,
 .elementor-453 .elementor-element.elementor-element-638a693>.elementor-column-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
@@ -383,6 +384,7 @@ html[lang="ar"] .elementor-453 .elementor-element.elementor-element-acf7abf:not(
 
     .elementor-453 .elementor-element.elementor-element-5331bae>.elementor-element-populated {
         padding: 10px 15px 10px 15px;
+        word-break: break-word;
     }
 }
 
