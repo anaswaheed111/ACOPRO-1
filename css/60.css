@@ -729,7 +729,7 @@ li.language-flag a {
 	
 	
 	.mheader-60 ul li ul li{float: left;
-        width: 80%;
+        width: 92%;
         text-align: left;
         margin: 4px 4%;
         border-bottom: 1px solid #f2f2f2;
@@ -738,17 +738,21 @@ li.language-flag a {
         height: 40px;
         overflow: hidden;
         background: #ffffff;
-        border-radius: 10px;}
+        border-radius: 10px;
+        height: 67px;
+        font-size: large;}
 	.mheader-60 .pmfrom-01 li{overflow:initial}
 	.mheader-60 .pmfrom-01 li i{color:#999}
-	.mheader-60 ul li ul li a{        width: 90%;
+	.mheader-60 ul li ul li a{width: 90%;
         float: left;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        padding-left: 12px;}
+        padding-left: 12px;
+        font-size: medium;
+        padding-top: 15px;}
 	/* 二级导航 */
 	.mheader-60 ul li ul li ul{width: 100%;float: left;height: auto;display: block;position: initial;}
 	/* .mheader-60 ul li ul li ul li{list-style: disc;} */
@@ -767,7 +771,7 @@ li.language-flag a {
 	.mheader-60 ul li ul li ul li{position: relative;
         overflow: hidden;
         line-height: 35px;
-        height: 35px;
+        height: 67px;
         border: 0;
         font-size: 12px;
         box-sizing: border-box;
