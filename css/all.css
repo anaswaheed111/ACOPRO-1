@@ -256,7 +256,8 @@ sup {
 img {
     border-style: none;
     height: auto;
-    width: auto
+    width: auto;
+    max-width: 100%;
 }
 
 button,
