@@ -31,6 +31,9 @@
     font-family: "Arial", Sans-serif;
     font-size: 48px;
 }
+html[lang="ar"] .elementor-452 .elementor-element.elementor-element-70a94d10 .elementor-heading-title {
+    direction: rtl !important;
+}
 
 .elementor-452 .elementor-element.elementor-element-98836a8 .elementor-text-editor {
     text-align: center;

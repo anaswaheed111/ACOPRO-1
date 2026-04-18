@@ -2668,6 +2668,9 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%)
 }
+.elementor-icon i:before{
+    color: #0084ff;
+}
 
 .elementor-icon i.fad {
     width: auto
